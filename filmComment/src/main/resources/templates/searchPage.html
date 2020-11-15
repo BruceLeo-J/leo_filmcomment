@@ -1,0 +1,160 @@
+<html lang="zh-CN" class="ua-windows ua-webkit">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <meta name="referrer" content="no-referrer" />
+    <meta name="google-site-verification" content="ok0wCgT20tBBgo9_zat2iAcimtN4Ftf5ccsh092Xeyw">
+    <title>
+    </title>
+
+    <meta name="baidu-site-verification" content="cZdR4xxR7RxmM4zE">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+
+    <link rel="apple-touch-icon" href="https://img3.doubanio.com/f/movie/d59b2715fdea4968a450ee5f6c95c7d7a2030065/pics/movie/apple-touch-icon.png">
+    <link href="https://img3.doubanio.com/f/shire/859dba5cddc7ed1435808cf5a8ddde5792cd6e0c/css/douban.css" rel="stylesheet" type="text/css">
+    <link href="https://img3.doubanio.com/f/shire/db02bd3a4c78de56425ddeedd748a6804af60ee9/css/separation/_all.css" rel="stylesheet" type="text/css">
+    <link href="https://img3.doubanio.com/f/movie/252bef058b97005c6a41e8f1b9f7b06b84bc71b3/css/movie/base/init.css" rel="stylesheet">
+    <script type="text/javascript" defer="" async="" src="https://img3.doubanio.com/dae/fundin/piwik.js"></script><script type="text/javascript" src="//img1.doubanio.com/ZGJhYzhmaC9mL2FkanMvOTY0ZDI5MjQ5N2ViOGI2ZGU3ODdkYmI3YTk3NDliMTJlMzNmMGNlYy9hZC5yZWxlYXNlLmpz" async="true"></script><script type="text/javascript">var _head_start = new Date();</script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/movie/0495cb173e298c28593766009c7b0a953246c5b5/js/movie/lib/jquery.js"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/5ecaf46d6954d5a30bc7d99be86ae34031646e00/js/douban.js"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/0efdc63b77f895eaf85281fb0e44d435c6239a3f/js/separation/_all.js"></script>
+
+    <link href="https://img3.doubanio.com/f/movie/2c95f768ea74284b900c04c0209b0a44f0a0de52/css/movie/top_movies.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/77323ae72a612bba8b65f845491513ff3329b1bb/js/do.js" data-cfg-autoload="false"></script>
+    <style type="text/css">
+        .site-nav-logo img{margin-bottom:0;}
+    </style>
+    <style type="text/css">img { max-width: 100%; }</style>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/562925b5e3824700.css">
+
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+    <script src="https://ssl.google-analytics.com/ga.js" async="true"></script></head>
+
+<body>
+
+<link href="//img3.doubanio.com/dae/accounts/resources/19870c3/shire/bundle.css" rel="stylesheet" type="text/css">
+
+<div id="db-global-nav" class="global-nav">
+    <div class="bd">
+        <div class="top-nav-info">
+            <a href="https://accounts.douban.com/passport/login?source=movie" class="nav-login" rel="nofollow">登录/注册</a>
+        </div>
+
+        <div class="global-nav-items">
+            <ul>
+                <li class="">
+                    <a th:href="@{/intro/main}" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-main&quot;,&quot;uid&quot;:&quot;0&quot;}">品位如你！欢迎加入豆瓣社区，请在此开始你的电影人生 ~ </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<script src="//img3.doubanio.com/dae/accounts/resources/19870c3/shire/bundle.js" defer="defer"></script>
+
+<link href="//img3.doubanio.com/dae/accounts/resources/19870c3/movie/bundle.css" rel="stylesheet" type="text/css">
+
+<div id="db-nav-movie" class="nav">
+    <div class="nav-wrap" style="margin-left: 365px">
+        <div class="nav-primary" >
+            <div class="nav-logo" >
+                <a th:href="@{/intro/main}">利欧电影</a>
+            </div>
+            <div class="nav-search">
+                <form action="/intro/searchFilm" method="get">
+                    <fieldset>
+                        <legend>搜索：</legend>
+                        <label for="inp-query">
+                        </label>
+                        <div class="inp"><input id="inp-query" name="searchKey" size="22" maxlength="60"
+                                                placeholder="搜索电影、电视剧、综艺..." autocomplete="off"></div>
+                        <div class="inp-btn"><input type="submit" value="搜索"></div>
+                        <input type="hidden" name="cat" value="1002"/>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="nav-secondary">
+
+
+        <div class="nav-items" style="margin-left: 50px;">
+            <ul style="padding-left: 80px" >
+                <li style="margin-left: 10px;"><a href="/intro/willRelease"
+                >最近影讯</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/pickFilm?leoFilmForm=电影&sort=hot"
+                >选电影</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/pickFilm?leoFilmForm=电视剧&sort=hot"
+                >电视剧</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/allSort?sort=hot"
+                >分类</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/top250"
+                >排行榜</a>
+                </li>
+                <li style="margin-left: 70px;"><a href=""
+                >热门影评</a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+<script src="//img3.doubanio.com/dae/accounts/resources/19870c3/movie/bundle.js" defer="defer"></script>
+
+<div id="wrapper">
+    <div id="content">
+        <div class="grid-16-8 clearfix">
+            <div class="article">
+                <span th:if="${nullMsg!=null}"><p th:text="${nullMsg}"></p></span>
+                <ol class="grid_view">
+                    <li th:each="leoFilm : ${leoFilmList}">
+                        <div class="item">
+                            <div class="pic">
+                                <em class=""><span th:text="${leoFilmList.indexOf(leoFilm)+1}"></span></em>
+                                <a th:href="@{/intro/filmDetail(id=${leoFilm.leoFilmId})}">
+                                    <img width="100" th:alt="${leoFilm.leoFilmName}" th:src="${leoFilm.leoFilmCover}" class="">
+                                </a>
+                            </div>
+                            <div class="info">
+                                <div class="hd">
+                                    <a href="https://movie.douban.com/subject/1292052/" class="">
+                                        <span class="title"><span th:text="${leoFilm.leoFilmName}"></span></span>
+                                    </a>
+                                    <span class="playable">[可播放]</span>
+                                </div>
+                                <div class="bd">
+                                    <p class="">
+                                        导演: [[${leoFilm.leoFilmDirector}]]<br>
+                                        [[${leoFilm.leoFilmReleasedate}]]&nbsp;[[${leoFilm.leoFilmType}]]
+                                    </p>
+                                    <div class="star">
+                                    <strong><span th:text="'评分：'+${leoFilm.leoFilmScore} "></span></strong>
+                                        <span property="v:best" content="10.0"></span>
+                                    </div>
+
+                                    <p class="quote">
+                                        <span class="inq"><span th:text="${leoFilm.leoFilmIntroduce}"></span></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" type="text/css" href="https://img3.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css">
+<link rel="stylesheet" type="text/css" href="https://img3.doubanio.com/f/movie/4aca95d66d37ec0712b3d19973b5d8feb75f2f05/css/movie/mod/reg_login_pop.css">
+<script type="text/javascript" src="https://img3.doubanio.com/f/shire/77323ae72a612bba8b65f845491513ff3329b1bb/js/do.js" data-cfg-autoload="false"></script>
+<script type="text/javascript" src="https://img3.doubanio.com/f/shire/383a6e43f2108dc69e3ff2681bc4dc6c72a5ffb0/js/ui/dialog.js"></script>

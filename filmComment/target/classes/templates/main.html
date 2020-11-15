@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="ua-windows ua-webkit" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <meta name="referrer" content="no-referrer" />
+    <meta name="google-site-verification" content="ok0wCgT20tBBgo9_zat2iAcimtN4Ftf5ccsh092Xeyw"/>
+    <title>
+        豆瓣电影
+    </title>
+
+    <meta name="baidu-site-verification" content="cZdR4xxR7RxmM4zE"/>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+
+    <meta http-equiv="mobile-agent" content="format=xhtml; url=https://m.douban.com/movie/">
+    <meta property="qc:admins" content="13753521351564752166375"/>
+
+
+    <meta name="keywords" content="电影、经典电影、热映、电视剧、美剧、影评、电影院、电影票、排行、推荐"/>
+    <meta name="description"
+          content="豆瓣电影提供最新的电影介绍及评论包括上映影片的影讯查询及购票服务。你可以记录想看、在看和看过的电影电视剧，顺便打分、写影评。根据你的口味，豆瓣电影会推荐好电影给你。"/>
+
+    <link rel="apple-touch-icon"
+          href="https://img3.doubanio.com/f/movie/d59b2715fdea4968a450ee5f6c95c7d7a2030065/pics/movie/apple-touch-icon.png">
+
+    <link th:href="@{/css/douban.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/_all.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/init.css}" rel="stylesheet">
+
+
+    <script type="text/javascript">var _head_start = new Date();</script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/movie/0495cb173e298c28593766009c7b0a953246c5b5/js/movie/lib/jquery.js"></script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/5ecaf46d6954d5a30bc7d99be86ae34031646e00/js/douban.js"></script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/0efdc63b77f895eaf85281fb0e44d435c6239a3f/js/separation/_all.js"></script>
+
+    <link rel="stylesheet"
+          href="https://img3.doubanio.com/f/movie/587856b78f46ea9f546a570724e03591afb37cfa/css/movie/home.css"/>
+    <!--<link rel="stylesheet" th:href="../css/home.css" />-->
+
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/77323ae72a612bba8b65f845491513ff3329b1bb/js/do.js"
+            data-cfg-autoload="false"></script>
+
+    <style type="text/css"></style>
+    <style type="text/css">img {
+        max-width: 100%;
+    }</style>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/11d137da675bd116.css">
+
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+<script type="text/javascript">var _body_start = new Date();</script>
+
+
+<link href="//img3.doubanio.com/dae/accounts/resources/527f922/shire/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+<div id="db-global-nav" class="global-nav">
+    <div class="bd">
+        <div class="top-nav-info">
+                <span th:if="${session.user}==null">
+                <a href="/login" class="nav-login" rel="nofollow">登录/注册</a>
+                </span>
+            <span th:if="${session.user}!=null">
+                    <div class="top-nav-info">
+                      <ul>
+                        <li class="nav-user-account">
+                          <a class="bn-more" >
+                            <span th:text="${session.user.getLeoUserName()}+'的账号'"></span><span class="arrow"></span>
+                          </a>
+                          <div class="more-items">
+                            <table cellpadding="0" cellspacing="0">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <a th:href="@{/userInfo(leoUserId=${session.user.getLeoUserId()})}">个人主页</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a target="_blank" th:href="@{/modifyUserInfo(leoUserId=${session.user.getLeoUserId()})}">帐号管理</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a th:href="@{/logout}">退出</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                </span>
+        </div>
+        <div class="global-nav-items">
+            <ul>
+                <li class="">
+                    <a th:href="@{/intro/main}" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-main&quot;,&quot;uid&quot;:&quot;0&quot;}">品位如你！欢迎加入豆瓣社区，请在此开始你的电影人生 ~ </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script th:src="@{/js/bundle.js}" defer="defer"></script>
+
+
+<link href="//img3.doubanio.com/dae/accounts/resources/527f922/movie/bundle.css" rel="stylesheet" type="text/css">
+
+
+<div id="db-nav-movie" class="nav">
+    <div class="nav-wrap" style="margin-left: 365px">
+        <div class="nav-primary" >
+            <div class="nav-logo" >
+                <a th:href="@{/intro/main}">利欧电影</a>
+            </div>
+            <div class="nav-search">
+                <form action="/intro/searchFilm" method="get">
+                    <fieldset>
+                        <legend>搜索：</legend>
+                        <label for="inp-query">
+                        </label>
+                        <div class="inp"><input id="inp-query" name="searchKey" size="22" maxlength="60"
+                                                placeholder="搜索电影、电视剧、综艺..." autocomplete="off"></div>
+                        <div class="inp-btn"><input type="submit" value="搜索"></div>
+                        <input type="hidden" name="cat" value="1002"/>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="nav-secondary">
+
+
+        <div class="nav-items" style="margin-left: 50px;">
+            <ul style="padding-left: 80px" >
+                <li style="margin-left: 10px;"><a href="/intro/willRelease"
+                >即将上映</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/pickFilm?leoFilmForm=电影&sort=hot"
+                >选电影</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/pickFilm?leoFilmForm=电视剧&sort=hot"
+                >电视剧</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/allSort?sort=hot"
+                >分类</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/top250"
+                >排行榜</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/journal/journalList"
+                >热门影刊</a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+<script src="//img3.doubanio.com/dae/accounts/resources/527f922/shire/bundle.js" defer="defer"></script>
+
+<div id="wrapper">
+
+    <div id="content">
+
+        <div class="grid-16-8 clearfix">
+            <div style="width: 1050px;height: 400px; ">
+                <link rel="stylesheet" href="https://img3.doubanio.com/f/movie/e27b13e6547399b3101c03fa007362ab4efc9e8f/css/movie/gallery.css"/>
+                <div id="gallery-frames">
+                    <div class="gallery-hd">
+                        <div class="gallery-ui-slide-control">
+                            <span class="prev-btn"><a class="gallery-btn-prev" href="javascript:void(0)"></a></span>
+                            <span class="next-btn"><a class="gallery-btn-next" href="javascript:void(0)"></a></span>
+                        </div>
+                        <div class="slide-tip"><span class="gallery-ui-slide-index">1</span> / <span
+                                class="gallery-ui-slide-max">10</span></div>
+                        <h2>即将上映</h2>
+                    </div>
+                    <div id="hot-gallery" style="width: 1050px; height: 330px;" >
+                        <ul class='ui-slide-content'>
+                            <li class='ui-slide-item' th:each="recommendFilm : ${recommendFilmList}">
+                                <div class="gallery-frame" style="width: 1050px; height: 300px">
+                                    <a th:href="@{/intro/filmTrailer(leoFilmId=${recommendFilm.leoFilmId})}" >
+                                        <img th:src="${recommendFilm.leoFilmCover}" th:alt="${recommendFilm.leoFilmName}" style="width: 650px;height: 300px;"/>
+                                    </a>
+                                    <div class="gallery-detail" style="width: 350px; height: 230px;">
+                                        <div class="gallery-hd">
+                                            <a th:href="@{/intro/filmTrailer(leoFilmId=${recommendFilm.leoFilmId})}" >
+                                                <h3>[[${recommendFilm.leoFilmName}]]</h3>
+                                            </a>
+                                        </div>
+                                        <div class="gallery-bd">
+                                            <p>
+                                                [[${recommendFilm.leoFilmIntroduce}]]
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="article"  >
+                <!--最新上映-->
+
+                <div id="screening" style=" height: 270px;" class="s" data-dstat-areaid="70" data-dstat-mode="click,expose">
+                    <div class="screening-hd">
+                        <h2>正在热映<span><a onclick="moreurl(this, {from:'mv_l_w'})"
+                                         href="/intro/willRelease">即将上映&raquo;</a></span></h2>
+                    </div>
+                    <div class="" style="width: 800px">
+
+
+                        <li th:each="film : ${filmList}" class="ui-slide-item" th:data-title="${film.leoFilmName}"
+                            data-rate="${film.leoFilmScore/film.leoFilmCommentCount}" data-star="45"
+                            data-trailer="https://movie.douban.com/subject/1293359/trailer"
+                            data-ticket="https://movie.douban.com/ticket/redirect/?movie_id=1293359"
+                            th:data-region="${film.leoFilmCountry}" th:data-director="${film.leoFilmDirector}"
+                            th:data-actors="${film.leoFilmActor}" data-enough="true">
+                            <ul>
+                                <li class="poster">
+                                    <a onclick="moreurl(this, {from:'mv_a_pst'})"
+                                       th:href="@{/intro/filmDetail(id=${film.leoFilmId})}">
+                                        <img th:src="${film.leoFilmCover}" style="height: 195px; width: 115px">
+                                    </a>
+                                </li>
+                                <li class="title">
+                                    <a onclick="moreurl(this, {from:'mv_a_tl'})"
+                                       th:href="@{/intro/filmDetail(id=${film.leoFilmId})}" class="">
+                                        <em style="color: #3F6BA6">[[${film.leoFilmName}]]</em></a>
+                                </li>
+                                <li class="rating">
+                                    <span class="subject-rate"><span th:text="${film.leoFilmScore} "></span></span>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </div>
+                </div>
+
+                <!--热门影视-->
+                <div style="height: 560px; width: 715px" class="gaia gaia-lite gaia-movie slide-mode">
+                    <div class="fliter-wp">
+                        <h2>
+                            <div data-type="movie" class="activate">热门影视</div>
+                            <div class="fliter-placeholder" style="height: 0px;"></div>
+                            <a href="/intro/allSort?sort=hot" class="more-link" style="margin-right: 5px;">更多影视»</a>
+                        </h2>
+                    </div>
+
+
+                    <div style="width:115px;height:210px;border:solid white;float: left;margin: 10px"
+                         th:each="TV : ${TVList}">
+                        <a th:href="@{/intro/filmDetail(id=${TV.leoFilmId})}">
+                            <img style="width: 115px ;height: 165px;" th:src="${TV.leoFilmCover}">
+                        </a>
+
+                        <p style="text-align: center;">
+                            <em style="color: #3F6BA6">[[${TV.leoFilmName}]]</em>
+                                <span class="subject-rate"><span th:text="${TV.leoFilmScore}"></span></span>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="aside" >
+                <div id="billboard" class="s" data-dstat-areaid="75" data-dstat-mode="click,expose">
+                    <div class="billboard-hd">
+                        <h2>大家都在看</h2>
+                    </div>
+                    <div class="billboard-bd">
+                        <table>
+                            <tr th:each="clickRank : ${clickRankList}">
+                                <td class="order"><span th:text="${clickRankList.indexOf(clickRank)+1}"></span></td>
+                                <td class="title"><a onclick="moreurl(this, {from:'mv_rk'})"
+                                                     th:href="@{/intro/filmDetail(id=${clickRank.leoFilmId})}">[[${clickRank.leoFilmName}]]</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+
+                <div id="doulist">
+                    <h2>热门影刊</h2>
+                    <ul>
+                        <li th:each="leoJournal:${leoJournalList}">
+                            <span>[[${leoJournal.leoJournalLike}]]人喜欢</span>
+                            <div class="title"><a th:href="@{/journal/journalDetail(journalId=${leoJournal.leoJournalId})}">[[${leoJournal.leoJournalTitle}]]</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <br/>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" th:src="@{/js//427f10bf39bba1e.js}"></script>
+<link rel="stylesheet" type="text/css"
+      th:href="@{/css/dialog.css}"/>
+<link rel="stylesheet" type="text/css"
+      th:href="@{/css/reg_login_pop.css}"/>
+<script type="text/javascript" th:src="@{/js/do.js}"
+        data-cfg-autoload="false"></script>
+<script type="text/javascript"
+        th:src="@{/js/dialog.js}"></script>
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,26 @@
+{
+  "name" : "LeoFilmForm",
+  "preName" : "",
+  "comment" : null,
+  "templateGroupName" : "Default",
+  "fullColumn" : [ {
+    "name" : "leoFilmFormId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "leoFilmFormName",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.graduation.filmcomment",
+  "savePath" : "./src/main/java/com/graduation/filmcomment",
+  "saveModelName" : "filmComment"
+}

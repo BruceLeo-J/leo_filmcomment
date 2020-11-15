@@ -1,0 +1,280 @@
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<script type="text/javascript" th:src="@{/js/jquery-3.3.1.min.js}"></script>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>注册豆瓣帐号</title>
+    <style type="text/css">
+        #db-nav-sns {
+            position: relative;
+            zoom: 1;
+            background: #edf4ed;
+        }
+
+        #db-nav-sns .nav-primary {
+            width: 1040px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 22px 0 20px;
+            zoom: 1;
+        }
+
+        .account-wrap {
+            width: 1040px;
+            margin: 20px auto 0;
+            overflow: hidden;
+        }
+
+        .account-main {
+            float: left;
+            width: 590px;
+        }
+
+        .account-side {
+            float: right;
+            width: 310px;
+            color: #666;
+        }
+
+    </style>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://img3.doubanio.com/f/accounts/a5d89573ecc648311108e9bcec1ab66de2b830cf/passport/build/register/index.css">
+
+    <script type='text/javascript'>
+
+  /*      $(function () {
+            $("#validateCode").keyup(function () {
+                checkKaptcha($(this).val());
+            });
+
+        });*/
+
+  function checkUserNameIsNotExist() {
+    var result = null;
+      $.ajax({
+          type:'POST'
+          ,async: false
+          ,url:'/isExistUserByCondition'
+          ,data:$("#registerForm").serialize()
+          ,success: function (json){
+              if (json.status==0){
+                  alert(json.errorMsg)
+                  result = false;
+              }else {
+                  result = true;
+              }
+          }
+      })
+      return result;
+
+
+  }
+
+
+  function checkUsername() {
+      var name = $("#leoUserName").val();
+      var test_name = /^\w{3,10}$/;
+      var flag = test_name.test(name);
+      if(flag){
+          $("#leoUserName").css("border","");
+      }else {
+          $("#leoUserName").css("border","1px solid red");
+      }
+      return flag;
+  }
+
+  function checkPassword() {
+      var password = $("#leoUserPassword").val();
+      var test_password=/^\w{6,20}$/;
+      var flag = test_password.test(password);
+      if(flag){
+          $("#leoUserPassword").css("border","");
+      }else {
+          $("#leoUserPassword").css("border","1px solid red");
+      }
+      return flag;
+  }
+  function  checkEmail() {
+      var email = $("#leoUserEmail").val();
+      var test_email = /^\w+@\w+\.\w+$/;
+      var flag = test_email.test(email);
+      if(flag){
+          $("#leoUserEmail").css("border","");
+      }else {
+          $("#leoUserEmail").css("border","1px solid red");
+      }
+      return flag;
+  }
+
+  function checkPhone() {
+      var telephone = $("#leoUserPhone").val();
+      var test_telephone = /^\d{3,11}$/;
+      var flag = test_telephone.test(telephone);
+      if(flag){
+          $("#leoUserPhone").css("border","");
+      }else {
+          $("#leoUserPhone").css("border","1px solid red");
+      }
+      return flag;
+  }
+
+
+
+  $(function () {
+      $("#mybutton").click(function () {
+          var methodResult = checkUserNameIsNotExist();
+          if (methodResult==true){
+              alert("methodResult:"+1)
+          checkKaptcha($("#validateCode").val());
+          }else {
+              alert("methodResult:"+0)
+          }
+      });
+
+  });
+
+        function reGenerateCode() {
+            $("#KaptchaCode").attr("src", "/generateCode?random=" + new Date().getMilliseconds());
+        }
+
+
+        function checkKaptcha(validateCode) {
+            alert("kaptcha")
+            var error = $("#validateCode").parent().next();
+            if (checkUsername() && checkPassword() && checkPassword() && checkEmail() && checkPhone() && validateCode != null && validateCode != "" ) {
+                $.ajax({
+                    type: "POST",
+                    async: false,
+                    url: "/checkCode?validateCode=" + validateCode,
+                    success: function (json) {
+                        if (json != null && json.code == 200 && json.status != null) {
+                            if (json.status == true) {
+                                $("#registerForm").submit();
+                                 // error.html("恭喜你验证码，正确！！！！！");
+                                alert("注册成功！")
+
+                            } else if (json.status == false) {
+                                alert("验证码错误，请重新输入！")
+                                //  error.html("验证码错误，请重新输入");
+                            } else {
+                                 // error.html("验证码过期，请重新输入");
+                                reGenerateCode();
+                            }
+                        }
+                        return false;
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert("服务器错误！状态码：" + XMLHttpRequest.status);
+                        // 状态
+                        console.log(XMLHttpRequest.readyState);
+                        // 错误信息
+                        console.log(textStatus);
+                        return false;
+                    }
+                });
+            } else {
+                error.html("请输入验证码！");
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+<div id="account">
+
+
+    <div id="db-nav-sns" class="nav">
+        <div class="nav-wrap">
+            <div class="nav-primary">
+                <a href="">
+                    <img src="https://img3.doubanio.com/f/accounts/4fd84763a74089b20eb02ba0225d6e7739d2c432/passport/pics/douban_logo@2x.png"
+                         width="142" alt="豆瓣">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="account-wrap">
+        <div class="account-main">
+
+            <!--<h1>注册豆瓣帐号</h1>-->
+            <div class="account-form">
+
+                <form id="registerForm" action="/saveUser" method="get">
+                    <div class="account-form-raw">
+                        <label class="account-form-label">设置昵称：</label>
+                        <div class="account-form-field" style="width:400px;">
+                            <input id="leoUserName" name="leoUserName" type="text" class="account-form-input" maxlength="14" autocomplete="off"
+                                   placeholder="昵称" tabindex="1">
+<!--                            <p style="float: right; margin-top: 5px;color: red " id="usernameErrorMsg"></p>-->
+                        </div>
+                    </div>
+
+                    <div class="account-form-raw">
+                        <label class="account-form-label">设置密码：</label>
+                        <div class="account-form-field">
+                            <input id="leoUserPassword" type="password" name="leoUserPassword" maxlength="20" autocomplete="off"
+                                   class="account-form-input password" placeholder="密码" tabindex="3">
+                            <span class="icon openpwd hide"></span>
+                        </div>
+                    </div>
+                    <div class="account-form-raw">
+                        <label class="account-form-label">设置手机号：</label>
+                        <div class="account-form-field">
+                            <input id="leoUserPhone" type="text" name="leoUserPhone" maxlength="11"
+                                   class="account-form-input" placeholder="手机号" tabindex="3">
+                            <span class="icon openpwd hide"></span>
+                        </div>
+                    </div>
+                    <div class="account-form-raw">
+                        <label class="account-form-label">设置邮箱：</label>
+                        <div class="account-form-field">
+                            <input id="leoUserEmail" type="email" name="leoUserEmail" maxlength="20"
+                                   class="account-form-input" placeholder="邮箱" tabindex="3">
+                            <span class="icon openpwd hide"></span>
+                        </div>
+                    </div>
+
+                    <div class="account-form-raw">
+                        <label class="account-form-label">验证码：</label>
+                        <div class="account-form-field" >
+                            <input name="validateCode" id="validateCode" type="text" placeholder="验证码" class="account-form-input" style="width: 150px; height: 40px" />
+                            <a href="javascript:void(0);" title="点击更换验证码">
+                                <img style="margin-left: 20px"  id="KaptchaCode" src="/generateCode" alt="更换验证码" height="36" width="100" onclick="reGenerateCode();">
+                            </a>
+                            <p style="color: red"></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 pull_left" >
+                        <input   type="button" id="mybutton" class="btn btn-active" value="注册">
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript"
+        src="https://img3.doubanio.com/f/accounts/c5268df4c1f0bada95cb3d2b80089a50b494b5ee/js/lib/jquery.min.js"
+        async="true"></script>
+<script type="text/javascript"
+        src="https://img3.doubanio.com/f/accounts/bbd909b4dd82f6e1c664380ff01325ec129436a1/js/lib/do.js"
+        data-cfg-corelib="https://img3.doubanio.com/f/accounts/c5268df4c1f0bada95cb3d2b80089a50b494b5ee/js/lib/jquery.min.js"></script>
+
+<script src="https://img3.doubanio.com/f/accounts/98c9b9502fda4eb35911ea2af23bdce6295dcb9f/passport/build/register/index.js"></script>
+<div></div>
+
+
+</body>
+</html>

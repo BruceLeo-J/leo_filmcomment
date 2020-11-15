@@ -1,0 +1,428 @@
+<html lang="zh-CN" class="ua-windows ua-webkit">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head><script src="https://www.douban.com/j/doumail/num?callback=jsonp_13biowmx7bhqw9n" async=""></script><script src="https://www.douban.com/j/notification/num?callback=jsonp_vphznrxnl7k7g2p" async=""></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <meta name="google-site-verification" content="ok0wCgT20tBBgo9_zat2iAcimtN4Ftf5ccsh092Xeyw">
+    <title>
+</title>
+    <meta name="baidu-site-verification" content="cZdR4xxR7RxmM4zE">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="referrer" content="no-referrer" />
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+    
+    <link rel="apple-touch-icon" href="https://img3.doubanio.com/f/movie/d59b2715fdea4968a450ee5f6c95c7d7a2030065/pics/movie/apple-touch-icon.png">
+    <link href="https://img3.doubanio.com/f/shire/859dba5cddc7ed1435808cf5a8ddde5792cd6e0c/css/douban.css" rel="stylesheet" type="text/css">
+    <link href="https://img3.doubanio.com/f/shire/db02bd3a4c78de56425ddeedd748a6804af60ee9/css/separation/_all.css" rel="stylesheet" type="text/css">
+    <link href="https://img3.doubanio.com/f/movie/252bef058b97005c6a41e8f1b9f7b06b84bc71b3/css/movie/base/init.css" rel="stylesheet">
+    <script type="text/javascript" defer="" async="" src="https://img3.doubanio.com/dae/fundin/piwik.js"></script><script type="text/javascript">var _head_start = new Date();</script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/movie/0495cb173e298c28593766009c7b0a953246c5b5/js/movie/lib/jquery.js"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/5ecaf46d6954d5a30bc7d99be86ae34031646e00/js/douban.js"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/0efdc63b77f895eaf85281fb0e44d435c6239a3f/js/separation/_all.js"></script>
+    
+    <link href="https://img3.doubanio.com/f/shire/0aff274d4e54ff7ade5adfc6128d4da5d8d014f9/css/ui/mypage.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/77323ae72a612bba8b65f845491513ff3329b1bb/js/do.js" data-cfg-autoload="false"></script>
+
+    <style type="text/css">
+    .item .title {background:none #f2f4f6;}
+    .list-view .highlight, .list-view .expanded{background:#f2f4f6 none;}
+</style>
+    <style type="text/css">img { max-width: 100%; }</style>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/7f9d0fabbdb1fe29.css">
+
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+<script src="https://ssl.google-analytics.com/ga.js" async="true"></script></head>
+
+<body>
+  
+    <script type="text/javascript">var _body_start = new Date();</script>
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/19870c3/shire/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+    <div id="db-global-nav" class="global-nav">
+        <div class="bd">
+
+            <div class="top-nav-info">
+                <ul>
+                    <li class="nav-user-account">
+                        <a target="_blank" href="https://accounts.douban.com/passport/setting/" class="bn-more">
+                            <span><span th:text="${leoUser.leoUserName}"></span>的帐号</span><span class="arrow"></span>
+                        </a>
+                        <div class="more-items">
+                            <table cellpadding="0" cellspacing="0">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <a th:href="@{/userInfo(leoUserId=${leoUser.leoUserId})}">个人主页</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a  th:href="@{/modifyUserInfo(leoUserId=${leoUser.leoUserId})}">帐号管理</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="/logout">退出</a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="global-nav-items">
+                <ul>
+                    <li class="">
+                        <a th:href="@{/intro/main}" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-main&quot;,&quot;uid&quot;:&quot;0&quot;}">品位如你！欢迎加入豆瓣社区，请在此开始你的电影人生 ~ </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/19870c3/shire/bundle.js" defer="defer"></script>
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/19870c3/movie/bundle.css" rel="stylesheet" type="text/css">
+
+    <div id="db-nav-movie" class="nav">
+        <div class="nav-wrap" style="margin-left: 365px">
+            <div class="nav-primary" >
+                <div class="nav-logo" >
+                    <a th:href="@{/intro/main}">利欧电影</a>
+                </div>
+                <div class="nav-search">
+                    <form action="/intro/searchFilm" method="get">
+                        <fieldset>
+                            <legend>搜索：</legend>
+                            <label for="inp-query">
+                            </label>
+                            <div class="inp"><input id="inp-query" name="searchKey" size="22" maxlength="60"
+                                                    placeholder="搜索电影、电视剧、综艺..." autocomplete="off"></div>
+                            <div class="inp-btn"><input type="submit" value="搜索"></div>
+                            <input type="hidden" name="cat" value="1002"/>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="nav-secondary">
+
+
+            <div class="nav-items" style="margin-left: 50px;">
+                <ul style="padding-left: 80px" >
+                    <li style="margin-left: 10px;"><a href="/intro/willRelease"
+                    >最近影讯</a>
+                    </li>
+                    <li style="margin-left: 70px;"><a href="/intro/pickFilm?leoFilmForm=电影&sort=hot"
+                    >选电影</a>
+                    </li>
+                    <li style="margin-left: 70px;"><a href="/intro/pickFilm?leoFilmForm=电视剧&sort=hot"
+                    >电视剧</a>
+                    </li>
+                    <li style="margin-left: 70px;"><a href="/intro/allSort?sort=hot"
+                    >分类</a>
+                    </li>
+                    <li style="margin-left: 70px;"><a href="/intro/top250"
+                    >排行榜</a>
+                    </li>
+                    <li style="margin-left: 70px;"><a href=""
+                    >热门影评</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/19870c3/movie/bundle.js" defer="defer"></script>
+
+    <div id="wrapper">
+
+    <div id="content">
+    <div id="db-usr-profile">
+        <div class="pic">
+            <a href="/people/144948388/">
+                <img height="48" width="48" th:alt="${session.user.getLeoUserName()}" th:src="${session.user.getLeoUserImage()}">
+            </a>
+        </div>
+        <div class="info">
+            <h1>我[[${backStatus}]]的电影(<span th:text="${leoFilmList.size()}"></span>)</h1>
+            <ul>
+                    
+        <li><a href="/people/144948388/">电影主页</a></li>
+    
+                    
+        <li><a href="/people/144948388/reviews">影评</a></li>
+    
+                    
+        <li><a href="/people/144948388/question">问答</a></li>
+    
+                    
+        <li><a href="/people/144948388/do">在看</a></li>
+    
+                    
+        <li><a href="/people/144948388/wish">想看</a></li>
+    
+                    
+        <li><a href="/people/144948388/collect">看过</a></li>
+    
+                    
+        <li><a href="https://www.douban.com/people/144948388/doulists">豆列</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/ticket/mine">电影票</a></li>
+    
+                    
+        <li><a href="https://movie.douban.com/notifications">电影提醒</a></li>
+    
+                    
+        <li><a href="/settings/">设置</a></li>
+    
+                    
+        <li class="sep">|</li>
+    
+                    
+        <li><a href="https://www.douban.com/people/144948388/">豆瓣主页</a></li>
+    
+            </ul>
+        </div>
+    </div>
+
+
+        <div class="grid-16-8 clearfix">
+            
+            
+            <div class="article">
+                
+    
+
+    <div class="opt-bar mb30 clearfix">
+        <div class="sort">
+            
+                按时间排序<span class="gray-dot">·</span><a href="/people/144948388/wish?sort=rating&amp;start=0&amp;mode=grid&amp;tags_sort=count" class="ck-option" target="_self">按评分排序</a><span class="gray-dot">·</span><a href="/people/144948388/wish?sort=title&amp;start=0&amp;mode=grid&amp;tags_sort=count" class="ck-option" target="_self">按标题排序</a>
+        </div>
+        <style>
+            .tabs-more {zoom:1; float:left; margin-left:38px; position: relative; top:3px}
+            .tabs-more .gray {color:#999}
+            .tabs-more .lnk-tab-more{padding-right:5px;background:#fff;}
+            .tabs-more .lnk-tab-more:hover{background:#369;}
+            .tabs-more .lnk-tab-more span{background: url("/pics/icon/tongcheng_tab_down.gif") no-repeat right 3px;padding-right:10px;display:inline-block}
+            .tabs-more .lnk-tab-more span.up{background: url("/pics/icon/tongcheng_tab_up.gif") no-repeat right 3px;padding-right:10px;}
+            .tabs-more .lnk-tab-more:hover span{color:#fff;background: url("/pics/icon/tongcheng_tab_down.gif") no-repeat right -8px;}
+            .tabs-more .lnk-tab-more:hover span.up{background: url("/pics/icon/tongcheng_tab_up.gif") no-repeat right -8px;}
+            .tabs-more ul {display:none;position:absolute; background:#fff; border:1px solid #aaa; padding:5px 0; left:55px;_left:53px;_top:19px; top:18px; width:70px}
+            .tabs-more ul li a {display:block;text-align:center; padding:3px 5px;margin:0}
+            .tabs-more ul li{margin:0; zoom:1}
+            .tabs-more ul li a:hover {background:#369; color:#fff; }
+
+            .item .info li {clear: both;}
+            .item .info li.intro {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 4; 
+                -webkit-box-orient: vertical;
+            }
+            .item .title .playable {font-size: 13px; padding-left: 3px; color: #00A65F;}
+
+            .grid-view .item {overflow:auto; display:table; width: 100%; zoom:1}
+            .grid-view .item > .pic, .grid-view .item > .info {display: table-cell;vertical-align: top;float:initial;}
+            .grid-view .item .tabs-more {margin-left:0;}
+            .grid-view .item .tabs-more span {color:#369;}
+            .grid-view .item .lnk-tab-more:hover span {color:#fff;}
+            .grid-view .item .clearDiv {clear:both}
+            .grid-view .item .tabs-more ul{left:0;margin-left:0}
+            .grid-view .item .comment {color:#000;}
+
+            .list-view .item {overflow:auto;display:table;width:100%; zoom:1}
+            .list-view .item .tabs-more{margin-left:0; margin-top:4px}
+            .list-view .item .tags{display:block;clear:both}
+            .list-view .item .tabs-more ul{left:0}
+            .list-view .item-show{height:17px;overflow:hidden}
+            .list-view .opt-ln {clear:both;margin-left:3px}
+            .list-view .comment {clear:both;}
+            .list-view .movieInfo {margin-top:4px;*margin-top:3px}
+
+        </style>
+        <script>
+            $(function(){
+                $(".lnk-tab-more").click(function(){
+                    $(this).next(".tabs-more-list").show();
+                    $("span",this).addClass("up");
+                    return false;
+                })
+                $(document.body).click(function(e){
+                    if($(e.target).parent().attr("class")!=="lnk-tab-more"){
+                        $(".tabs-more-list").hide();
+                        $("span.up").removeClass("up");
+                    }
+                })
+            })
+        </script>
+        <div class="tabs-more">
+            
+            <span class="gray">筛选影片:</span>
+            <a class="lnk-tab-more" href="#">
+                <span>全部</span>
+            </a>
+            <ul class="tabs-more-list">
+                <li><a href="/people/144948388/wish?sort=time&amp;amp;start=0&amp;amp;filter=schedule&amp;amp;mode=grid&amp;amp;tags_sort=count">正在热映</a></li>
+                <li><a href="/people/144948388/wish?sort=time&amp;amp;start=0&amp;amp;filter=video&amp;amp;mode=grid&amp;amp;tags_sort=count">在线观看</a></li>
+            </ul>
+        </div>
+        <div class="mode">
+            <span class="subject-num">
+                1-15&nbsp;/&nbsp;39
+            </span>
+            <ul class="grid-list-bar">
+                
+                    <li class="grid-on">grid</li>
+                    <li class="list">
+                        <a href="/people/144948388/wish?sort=time&amp;amp;start=0&amp;amp;filter=all&amp;amp;mode=list&amp;amp;tags_sort=count">list</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+        
+
+<script type="text/javascript">
+$(function() {
+    $('.d_link').click(function() {
+        $(this).parents("div.item").hide();
+        var url = "/j/mine/j_cat_ui";
+        if (/\/location\//.test(location.href)) {
+            url = "/location" + url;
+        }
+        $.post_withck(url, {sid: this.rel},
+            function(sjson) {
+                var ret = eval("(" + sjson + ")");
+                if (!ret.result) {
+                    alert("出错了，请稍后重试!");
+                }
+        });
+    });
+})
+</script>
+
+
+<div class="grid-view">
+        
+        <div class="item" th:each="leoFilm : ${leoFilmList}">
+            <div class="pic">
+                <a th:title="${leoFilm.leoFilmName}" th:href="@{/intro/filmDetail(id=${leoFilm.leoFilmId})}" class="nbg">
+                    <img th:alt="${leoFilm.leoFilmName}" th:src="${leoFilm.leoFilmCover}" class="">
+                </a>
+            </div>
+            <div class="info">
+                <ul>
+                    <li class="title">
+                        <a th:href="@{/intro/filmDetail(id=${leoFilm.leoFilmId})}"  class="">
+                            <em>[[${leoFilm.leoFilmName}]]</em>
+                        </a>
+                    </li>
+                    <li class="intro">
+                        <span th:text="'影片: '+${leoFilm.leoFilmName}"></span> /
+                        <span th:text="${'导演: '+leoFilm.leoFilmDirector}"></span> /
+                        <span th:text="${'编剧: '+leoFilm.leoFilmEditor}"></span>  /
+                        <span th:text="${'片长: '+leoFilm.leoFilmLength}"></span>分钟 /
+                        <span th:text="${'主演: '+leoFilm.leoFilmActor}"></span> /
+                        <span th:text="${'语言: '+leoFilm.leoFilmLanguage}"></span></li>
+                    <li><span class="date"><span th:text="${#strings.substring('__${leoFilm.leoFilmCommentDate}__',0,10)}"></span></span></li>
+                    <p th:text="${leoFilm.leoFilmCommentContent}"></p>
+                        <li class="clearfix opt-ln">
+                            <div class="opt-l gact">
+<!--                                <a class="j a_collect_btn" rel="nofollow" name="pbtn-11502973" href="javascript:;">修改</a>&nbsp;&nbsp;-->
+                            <a class="d_link " rel="11502973:F" th:href="@{/intro/deleteMyCollectFilmByFilmId(leoFilmCommentId=${leoFilm.leoFilmCommentId},leoFilmId=${leoFilm.leoFilmId},leoFilmCommentStatus=${backStatus})}">删除</a>
+                            </div>
+                        </li>
+                </ul>
+            </div>
+        </div>
+        
+
+</div>
+
+    
+    
+    
+
+    
+        <div class="paginator">
+        <span class="prev">
+            &lt;前页
+        </span>
+        
+        
+
+                <span class="thispage" data-total-page="3">1</span>
+                
+            <a href="/people/144948388/wish?start=15&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid">2</a>
+        
+                
+            <a href="/people/144948388/wish?start=30&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid">3</a>
+        
+        <span class="next">
+            <link rel="next" href="/people/144948388/wish?start=15&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid">
+            <a href="/people/144948388/wish?start=15&amp;sort=time&amp;rating=all&amp;filter=all&amp;mode=grid">后页&gt;</a>
+        </span>
+
+        </div>
+
+
+
+            </div>
+            <div class="aside">
+                
+    
+    
+
+
+<div class="side-info">
+    <a href="https://www.douban.com/people/144948388/" class="side-info-avatar"><img height="48" width="48" th:alt="${session.user.getLeoUserName()}" th:src="${session.user.getLeoUserImage()}"></a>
+    <div class="side-info-txt">
+        <h3>[[${session.user.getLeoUserName()}]]</h3>
+        &gt;&nbsp;<a href="https://www.douban.com/people/144948388/">豆瓣主页</a>
+    </div>
+    <div class="user-content">
+    </div>
+</div>
+
+    <div class="mod">
+        <p class="pl2 m0">
+            &gt; <a href="/people/144948388/">我的电影主页</a>
+        </p>
+    </div>
+        
+    <h2>
+        想看的标签
+            &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+    </h2>
+
+<div class="opt-bar mb15 clearfix">
+    <div class="sort">
+        按标签量排序<span class="gray-dot">·</span><a href="/people/144948388/wish?sort=time&amp;start=0&amp;filter=all&amp;mode=grid&amp;tags_sort=name">按首字母排序</a>
+    </div>
+</div>
+<ul class="tag-list mb10">
+
+</ul>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+<div id="search_suggest" style="display: none; top: 78px; left: 402px;"><ul></ul></div></body></html>

@@ -1,0 +1,394 @@
+<html lang="zh-CN" class="ua-windows ua-webkit">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="https://www.douban.com/j/doumail/num?callback=jsonp_at16llz5jnu4l8i" async=""></script>
+    <script src="https://www.douban.com/j/notification/num?callback=jsonp_62gnev2oxfovwu1" async=""></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <meta name="referrer" content="no-referrer" />
+    <meta name="google-site-verification" content="ok0wCgT20tBBgo9_zat2iAcimtN4Ftf5ccsh092Xeyw">
+    <title>
+        影评
+    </title>
+
+    <meta name="baidu-site-verification" content="cZdR4xxR7RxmM4zE">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="mobile-agent" content="format=html5; url=https://m.douban.com/movie/subject/25907124/comments">
+    <script type="text/javascript" defer="" async="" src="https://img3.doubanio.com/dae/fundin/piwik.js"></script>
+    <script type="text/javascript"
+            src="//img1.doubanio.com/ZGJhYzhmaC9mL2FkanMvOTY0ZDI5MjQ5N2ViOGI2ZGU3ODdkYmI3YTk3NDliMTJlMzNmMGNlYy9hZC5yZWxlYXNlLmpz"
+            async="true"></script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/77323ae72a612bba8b65f845491513ff3329b1bb/js/do.js"
+            data-cfg-autoload="false"></script>
+
+    <link rel="apple-touch-icon"
+          href="https://img3.doubanio.com/f/movie/d59b2715fdea4968a450ee5f6c95c7d7a2030065/pics/movie/apple-touch-icon.png">
+    <link href="https://img3.doubanio.com/f/shire/859dba5cddc7ed1435808cf5a8ddde5792cd6e0c/css/douban.css"
+          rel="stylesheet" type="text/css">
+    <link href="https://img3.doubanio.com/f/shire/db02bd3a4c78de56425ddeedd748a6804af60ee9/css/separation/_all.css"
+          rel="stylesheet" type="text/css">
+    <link href="https://img3.doubanio.com/f/movie/252bef058b97005c6a41e8f1b9f7b06b84bc71b3/css/movie/base/init.css"
+          rel="stylesheet">
+    <script type="text/javascript">var _head_start = new Date();</script>
+    <script type="text/javascript"
+            th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/5ecaf46d6954d5a30bc7d99be86ae34031646e00/js/douban.js"></script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/0efdc63b77f895eaf85281fb0e44d435c6239a3f/js/separation/_all.js"></script>
+
+    <style type="text/css"></style>
+    <style type="text/css">img {
+        max-width: 100%;
+    }</style>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/6788c12fe7059063.css">
+
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+    <script src="https://ssl.google-analytics.com/ga.js" async="true"></script>
+</head>
+
+<body>
+
+<script type="text/javascript">var _body_start = new Date();</script>
+
+
+<link href="//img3.doubanio.com/dae/accounts/resources/19870c3/shire/bundle.css" rel="stylesheet" type="text/css">
+
+
+<div id="db-global-nav" class="global-nav">
+    <div class="bd">
+
+        <div class="top-nav-info">
+                <span th:if="${session.user}==null">
+                <a href="/login" class="nav-login" rel="nofollow">登录/注册</a>
+                </span>
+            <span th:if="${session.user}!=null">
+                    <div class="top-nav-info">
+                      <ul>
+                        <li class="nav-user-account">
+                          <a  href="" class="bn-more" rel="off">
+                            <span th:text="${session.user.getLeoUserName()}+'的账号'"></span><span class="arrow"></span>
+                          </a>
+                          <div class="more-items">
+                            <table cellpadding="0" cellspacing="0">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <a th:href="@{/userInfo/{id}(id=${session.user.getLeoUserId()})}">个人主页</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a th:href="@{/modifyUserInfo(leoUserId=${session.user.getLeoUserId()})}">帐号管理</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a th:href="@{/logout}">退出</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                </span>
+        </div>
+
+
+        <div class="global-nav-items">
+            <ul>
+                <li class="">
+                    <a th:href="@{/intro/main}" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-main&quot;,&quot;uid&quot;:&quot;0&quot;}">品位如你！欢迎加入豆瓣社区，请在此开始你的电影人生 ~ </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+<script>
+    ;window._GLOBAL_NAV = {
+        USER_ID: "144948388",
+        UPLOAD_AUTH_TOKEN: "144948388:b802ebc8926e46ed799ae9306d9f9812e20212a4",
+        SSE_TOKEN: "4e794465a1f551acf63561a1e70c9042cf057020",
+        SSE_TIMESTAMP: "1601968135",
+        DOUBAN_URL: "https://www.douban.com",
+        N_NEW_NOTIS: 0,
+        N_NEW_DOUMAIL: 0
+    };
+</script>
+
+
+<script src="//img3.doubanio.com/dae/accounts/resources/19870c3/shire/bundle.js" defer="defer"></script>
+
+
+<link href="//img3.doubanio.com/dae/accounts/resources/19870c3/movie/bundle.css" rel="stylesheet" type="text/css">
+
+
+<div id="db-nav-movie" class="nav">
+    <div class="nav-wrap" style="margin-left: 365px">
+        <div class="nav-primary" >
+            <div class="nav-logo" >
+                <a th:href="@{/intro/main}">利欧电影</a>
+            </div>
+            <div class="nav-search">
+                <form action="/intro/searchFilm" method="get">
+                    <fieldset>
+                        <legend>搜索：</legend>
+                        <label for="inp-query">
+                        </label>
+                        <div class="inp"><input id="inp-query" name="searchKey" size="22" maxlength="60"
+                                                placeholder="搜索电影、电视剧、综艺..." autocomplete="off"></div>
+                        <div class="inp-btn"><input type="submit" value="搜索"></div>
+                        <input type="hidden" name="cat" value="1002"/>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="nav-secondary">
+
+
+        <div class="nav-items" style="margin-left: 50px;">
+            <ul style="padding-left: 80px" >
+                <li style="margin-left: 10px;"><a href="/intro/willRelease"
+                >最近影讯</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/pickFilm?leoFilmForm=电影&sort=hot"
+                >选电影</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/pickFilm?leoFilmForm=电视剧&sort=hot"
+                >电视剧</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/allSort?sort=hot"
+                >分类</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/top250"
+                >排行榜</a>
+                </li>
+                <li style="margin-left: 70px;"><a href=""
+                >热门影评</a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<script id="suggResult" type="text/x-jquery-tmpl">
+  <li data-link="{{= url}}">
+            <a href="{{= url}}" onclick="moreurl(this, {from:'movie_search_sugg', query:'{{= keyword }}', subject_id:'{{= id}}', i: '{{= index}}', type: '{{= type}}'})">
+            <img src="{{= img}}" width="40" />
+            <p>
+                <em>{{= title}}</em>
+                {{if year}}
+                    <span>{{= year}}</span>
+                {{/if}}
+                {{if sub_title}}
+                    <br /><span>{{= sub_title}}</span>
+                {{/if}}
+                {{if address}}
+                    <br /><span>{{= address}}</span>
+                {{/if}}
+                {{if episode}}
+                    {{if episode=="unknow"}}
+                        <br /><span>集数未知</span>
+                    {{else}}
+                        <br /><span>共{{= episode}}集</span>
+                    {{/if}}
+                {{/if}}
+            </p>
+        </a>
+        </li>
+
+</script>
+
+
+<script src="//img3.doubanio.com/dae/accounts/resources/19870c3/movie/bundle.js" defer="defer"></script>
+
+
+
+<div id="wrapper">
+    <div id="content">
+
+<!--        <h1><span th:text="${leoFilm.leoFilmName}"></span>影评</h1>-->
+
+        <div class="grid-16-8 clearfix">
+
+
+            <div class="article">
+
+
+
+                <div class="title_line clearfix color_gray">
+                    <div class="fleft Comments-sortby">
+                        <span th:if="${backSort.equals('hot')}">
+                            <a style="background-color: #3377AA;color: white" th:href="@{/comment/allComment(leoFilmId=${leoFilm.leoFilmId},sort=hot)}">热门</a></span>
+                        <span th:if="${!backSort.equals('hot')}">
+                            <a th:href="@{/comment/allComment(leoFilmId=${leoFilm.leoFilmId},sort=hot)}">热门</a></span>
+                        <span th:if="${backSort.equals('latest')}">
+                            <a style="background-color: #3377AA;color: white" th:href="@{/comment/allComment(leoFilmId=${leoFilm.leoFilmId},sort=latest)}">最新</a></span>
+                        <span th:if="${!backSort.equals('latest')}">
+                            <a th:href="@{/comment/allComment(leoFilmId=${leoFilm.leoFilmId},sort=latest)}">最新</a></span>
+                    </div>
+                </div>
+
+                <div class="mod-bd" id="comments">
+
+                    <div class="comment-item " th:each="leoFilmComment : ${pageInfo.list}">
+
+
+                        <div class="avatar">
+                            <a th:title="${leoFilmComment.leoUserName}" href="">
+                                <img th:src="${leoFilmComment.leoUserImage}">
+                            </a>
+                        </div>
+                        <div class="comment">
+                            <h3>
+            <span class="comment-vote">
+                    <span class="votes vote-count"><span th:id="${leoFilmComment.leoFilmCommentId}" th:text="${leoFilmComment.leoFilmCommentAgree}"></span></span>
+                    <a th:id="${leoFilmComment.leoFilmCommentId}" onclick="agreeComment(this)" href="javascript:;"><span>有用</span></a>
+
+            </span>
+                                <span class="comment-info">
+                <a href="https://www.douban.com/people/68632569/" class=""><span th:text="${leoFilmComment.leoUserName}"></span></a>
+                    <span><span th:text="${leoFilmComment.leoFilmCommentStatus}"></span></span>
+                    <span th:if="${leoFilmComment.leoFilmCommentScore}==10"><span id="mystar1" class="allstar50" title="力荐"></span></span>
+                    <span th:if="${leoFilmComment.leoFilmCommentScore}==8"><span  id="mystar2" class="allstar40" title="推荐"></span></span>
+                    <span th:if="${leoFilmComment.leoFilmCommentScore}==6"><span  id="mystar3" class="allstar30" title="一般"></span></span>
+                    <span th:if="${leoFilmComment.leoFilmCommentScore}==4"><span  id="mystar4" class="allstar20" title="较差"></span></span>
+                    <span th:if="${leoFilmComment.leoFilmCommentScore}==2"><span  id="mystar5" class="allstar10" title="很差"></span></span>
+                <span class="comment-time " title="2020-10-01 09:51:27">
+                    <span th:text="${#strings.substring('__${leoFilmComment.leoFilmCommentDate}__',0,16)}"></span>
+                </span>
+            </span>
+                            </h3>
+                            <p class=" comment-content">
+
+                                <span class="short"><span th:text="${leoFilmComment.leoFilmCommentContent}"></span></span>
+                            </p>
+                            <div class="comment-report" style="visibility: hidden;"><a rel="nofollow"
+                                                                                       href="javascript:void(0)">投诉</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <style>
+                        #comments .comment-report {
+                            text-align: right;
+                        }
+
+                    </style>
+
+                    <script type="text/javascript"
+                            src="https://img3.doubanio.com/f/shire/072a17e1a083e85fab3d9bb187de25d07c97f544/js/report_dialog.js"></script>
+                    <link rel="stylesheet" type="text/css"
+                          href="https://img3.doubanio.com/f/shire/b45aa277f8b8df40596b96582dafb1ed0a899a64/css/report_dialog.css">
+
+                    <script th:inline="javascript">
+
+                        function agreeComment(obj){
+
+                            $.ajax({
+                                type: 'GET'
+                                , url: '/comment/agreeComment'
+                                ,data:{leoFilmCommentId:obj.id}
+                                , success: function (res) {
+                                    if(res.code==-1){
+                                        alert("请先登录，再点赞！")
+                                        return false;
+                                    }else {
+                                        document.getElementById(""+res.commentId).innerHTML= res.agreeCount
+                                    }
+                                }
+                            });
+                        }
+
+                    </script>
+
+                    <div id="paginator" style="margin-left: 165px;">
+                        <a th:href="@{/comment/allComment(leoFilmId=${leoFilm.leoFilmId},sort=${backSort})}">&lt;&lt; 首页</span></a>
+                        <a th:href="@{/comment/allComment(pageNum=${pageInfo.pageNum - 1},leoFilmId=${leoFilm.leoFilmId},sort=${backSort})}">&lt; 前页</a>
+
+                        <span th:each="pageNum : ${pageInfo.navigatepageNums}">
+
+                            <span th:if="${pageNum!=pageInfo.pageNum}" >
+                                <a th:href="@{/comment/allComment(pageNum=${pageNum},leoFilmId=${leoFilm.leoFilmId},sort=${backSort})}">[[${pageNum}]]</a>
+                            </span>
+                            <span th:if="${pageNum==pageInfo.pageNum}" >
+                                <a th:href="@{/comment/allComment(pageNum=${pageNum},leoFilmId=${leoFilm.leoFilmId},sort=${backSort})}" style="background-color: #83BF73;">[[${pageNum}]]</a>
+                            </span>
+
+                        </span>
+
+                            </span>
+
+                        <a th:href="@{/comment/allComment(pageNum=${pageInfo.pageNum + 1},leoFilmId=${leoFilm.leoFilmId},sort=${backSort})}">后页 &gt;</a>
+                        <a th:href="@{/comment/allComment(pageNum=${pageInfo.pages},leoFilmId=${leoFilm.leoFilmId},sort=${backSort})}">尾页 &gt;&gt;</a>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="aside">
+
+
+                <p class="pl2">&gt; <a th:href="@{/intro/filmDetail(id=${leoFilm.leoFilmId})}">去 <span th:text="${leoFilm.leoFilmName}"></span> 的页面</a></p>
+                <div class="indent">
+                    <div class="movie-summary">
+                        <div class="movie-pic"><a href="">
+                            <img th:alt="${leoFilm.leoFilmName}"
+                             th:title="${leoFilm.leoFilmName}"
+                             th:src="${leoFilm.leoFilmCover}"
+                             width="100px"></a>
+                        </div>
+                        <span class="attrs">
+        <p>
+            <span class="pl">导演:</span>
+                <a href=""><span th:text="${leoFilm.leoFilmDirector}"> </span></a>
+        </p>
+        <p>
+            <span class="pl">主演:</span>
+                <a href=""><span th:text="${leoFilm.leoFilmActor}"> </span></a>
+        </p>
+        <p>
+            <span class="pl">地区:</span>
+                <span th:text="${leoFilm.leoFilmCountry}"> </span>
+        </p>
+        <p>
+            <span class="pl">片长:</span>
+                 <span th:text="${leoFilm.leoFilmLength}"> </span>分钟
+        </p>
+        <p>
+            <span class="pl">上映:</span>
+                 <span th:text="${leoFilm.leoFilmReleasedate}"> </span>
+        </p>
+
+        <a class="trail_link" data-trailer-id="266467" th:href="@{/intro/filmTrailer(leoFilmId=${leoFilm.leoFilmId})}">预告片</a>
+    </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- COLLECTED JS -->
+
+<script type="text/javascript"
+        src="https://img3.doubanio.com/f/shire/383a6e43f2108dc69e3ff2681bc4dc6c72a5ffb0/js/ui/dialog.js"></script>
+<script src="https://img3.doubanio.com/f/movie/33bb917eefbefa3c41973b87efd26faa433e980e/js/movie/lib/subject-comments/comments.js"></script>
+</body>
+</html>

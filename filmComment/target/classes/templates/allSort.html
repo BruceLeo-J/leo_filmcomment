@@ -1,0 +1,359 @@
+<html lang="zh-CN" class="ua-windows ua-webkit">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <meta name="referrer" content="no-referrer" />
+    <meta name="google-site-verification" content="ok0wCgT20tBBgo9_zat2iAcimtN4Ftf5ccsh092Xeyw">
+    <title>
+
+    </title>
+    <meta name="baidu-site-verification" content="cZdR4xxR7RxmM4zE">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+
+    <link th:href="@{/css/douban.css}"
+          rel="stylesheet" type="text/css">
+    <link th:href="@{/css/_all.css}"
+          rel="stylesheet" type="text/css">
+    <link th:href="@{/css/init.css}"
+          rel="stylesheet">
+
+    <script type="text/javascript"
+            src="//img1.doubanio.com/ZGJhYzhmaC9mL2FkanMvOTY0ZDI5MjQ5N2ViOGI2ZGU3ODdkYmI3YTk3NDliMTJlMzNmMGNlYy9hZC5yZWxlYXNlLmpz"
+            async="true"></script>
+    <script type="text/javascript">var _head_start = new Date();</script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/movie/0495cb173e298c28593766009c7b0a953246c5b5/js/movie/lib/jquery.js"></script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/5ecaf46d6954d5a30bc7d99be86ae34031646e00/js/douban.js"></script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/0efdc63b77f895eaf85281fb0e44d435c6239a3f/js/separation/_all.js"></script>
+
+    <meta id="meta-viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link href="https://img3.doubanio.com/f/movie/8495686435eeee3c8f283ae6964a82ac93ff5a19/css/movie/responsive.css"
+          rel="stylesheet" type="text/css" media="only screen and (max-device-width: 640px)">
+    <link rel="stylesheet"
+          href="https://img3.doubanio.com/f/movie/fc5a7b9631f6e089a6a047e0e701207243e3fbdf/css/movie/project/gaia/__init__.css">
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/77323ae72a612bba8b65f845491513ff3329b1bb/js/do.js"
+            data-cfg-autoload="false"></script>
+    <style>
+        .gaia h2 {
+            display: none;
+        }
+    </style>
+
+    <style type="text/css"></style>
+    <style type="text/css">img {
+        max-width: 100%;
+    }</style>
+    <script type="text/javascript"></script>
+
+
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+    <script src="https://ssl.google-analytics.com/ga.js" async="true"></script>
+</head>
+
+<body>
+
+<link href="//img3.doubanio.com/dae/accounts/resources/19870c3/shire/bundle.css" rel="stylesheet" type="text/css">
+
+<div id="db-global-nav" class="global-nav">
+    <div class="bd">
+        <div class="top-nav-info">
+            <a href="https://accounts.douban.com/passport/login?source=movie" class="nav-login" rel="nofollow">登录/注册</a>
+        </div>
+
+        <div class="global-nav-items">
+            <ul>
+                <li class="">
+                    <a th:href="@{/intro/main}" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-main&quot;,&quot;uid&quot;:&quot;0&quot;}">品位如你！欢迎加入豆瓣社区，请在此开始你的电影人生 ~ </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<script src="//img3.doubanio.com/dae/accounts/resources/19870c3/shire/bundle.js" defer="defer"></script>
+
+<link href="//img3.doubanio.com/dae/accounts/resources/19870c3/movie/bundle.css" rel="stylesheet" type="text/css">
+
+
+<div id="db-nav-movie" class="nav">
+    <div class="nav-wrap" style="margin-left: 365px">
+        <div class="nav-primary" >
+            <div class="nav-logo" >
+                <a th:href="@{/intro/main}">利欧电影</a>
+            </div>
+            <div class="nav-search">
+                <form action="/intro/searchFilm" method="get">
+                    <fieldset>
+                        <legend>搜索：</legend>
+                        <label for="inp-query">
+                        </label>
+                        <div class="inp"><input id="inp-query" name="searchKey" size="22" maxlength="60"
+                                                placeholder="搜索电影、电视剧、综艺..." autocomplete="off"></div>
+                        <div class="inp-btn"><input type="submit" value="搜索"></div>
+                        <input type="hidden" name="cat" value="1002"/>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="nav-secondary">
+
+
+        <div class="nav-items" style="margin-left: 50px;">
+            <ul style="padding-left: 80px" >
+                <li style="margin-left: 10px;"><a href="/intro/willRelease"
+                >即将上映</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/pickFilm?leoFilmForm=电影&sort=hot"
+                >选电影</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/pickFilm?leoFilmForm=电视剧&sort=hot"
+                >电视剧</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/allSort?sort=hot"
+                >分类</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/top250"
+                >排行榜</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/journal/journalList"
+                >热门影刊</a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+<script src="//img3.doubanio.com/dae/accounts/resources/19870c3/movie/bundle.js" defer="defer"></script>
+
+<div id="wrapper">
+    <div id="content">
+
+        <h1>所有分类</h1>
+
+        <div class="grid-16-8 clearfix">
+            <div class="article">
+
+
+                <div class="gaia">
+                    <div class="detail-pop" style="display: none; top: 353.425px; left: 774.6px;">
+                        <div class="wp">
+                        </div>
+                    </div>
+
+                    <div class="fliter-wp">
+                        <div class="filter">
+                            <form action="/intro/allSort" id="conditionForm"  autocomplete="off">
+                                <div class="tags">
+                                    <div class="tag-list">
+                                        <label class="activate">
+                                            <input type="radio" id="leoFilmType0" onclick="typeClick()" value=""  name="leoFilmType" >全部类型</label>
+                                        </label>
+                                        <label   th:each="leoFilmType:${leoFilmTypeList}" >
+                                            <input type="radio" th:id="${'leoFilmType'+(leoFilmTypeList.indexOf(leoFilmType)+1)}" onclick="typeClick()"  name="leoFilmType" th:value="${leoFilmType.leoFilmTypeName}" >[[${leoFilmType.leoFilmTypeName}]]</label>
+                                        </label>
+                                    </div>
+                                    <br>
+                                    <div class="tag-list">
+                                        <label class="activate">
+                                            <input type="radio" id="leoFilmCountry0" onclick="countryClick()" value="" name="leoFilmCountry" >全部地区</label>
+                                        </label>
+                                        <label th:each="leoFilmCountry:${leoFilmCountryList}" >
+                                            <input type="radio" th:id="${'leoFilmCountry'+(leoFilmCountryList.indexOf(leoFilmCountry)+1)}" onclick="countryClick()" name="leoFilmCountry" th:value="${leoFilmCountry.leoFilmCountryName}" >[[${leoFilmCountry.leoFilmCountryName}]]</label>
+                                        </label>
+                                    </div>
+                                    <br>
+                                    <div class="tag-list">
+                                        <label class="activate">
+                                            <input type="radio" id="leoFilmLanguage0" onclick="languageClick()" value="" name="leoFilmLanguage" >全部语言</label>
+                                        </label>
+                                        <label th:each="leoFilmLanguage:${leoFilmLanguageList}" >
+                                            <input type="radio" th:id="${'leoFilmLanguage'+(leoFilmLanguageList.indexOf(leoFilmLanguage)+1)}" onclick="languageClick()" name="leoFilmLanguage" th:value="${leoFilmLanguage.leoFilmLanguageName}" >[[${leoFilmLanguage.leoFilmLanguageName}]]</label>
+                                        </label>
+                                    </div>
+                                    <br>
+                                    <div class="tag-list">
+                                        <label class="activate">
+                                            <input type="radio" id="leoFilmForm0" onclick="formClick()" value=""  name="leoFilmForm" >全部形式</label>
+                                        </label>
+                                        <label th:each="leoFilmForm:${leoFilmFormList}" >
+                                            <input type="radio" th:id="${'leoFilmForm'+(leoFilmFormList.indexOf(leoFilmForm)+1)}" onclick="formClick()" name="leoFilmForm" th:value="${leoFilmForm.leoFilmFormName}" >[[${leoFilmForm.leoFilmFormName}]]</label>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="tool">
+                                    <div class="sort">
+                                        <label>
+                                            <input type="radio" id="sort1" name="sort" value="hot">按热度排序
+                                        </label>
+                                        <label>
+                                            <input type="radio" id="sort2" name="sort" value="time">按时间排序
+                                        </label>
+                                        <label>
+                                            <input type="radio" id="sort3"  name="sort" value="comment">按评价排序
+                                        </label>
+                                         <label class="activate" >
+                                            <button style="width:80px"  type="submit"  id="searchBtn" >搜索</button>
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <script th:inline="javascript">
+
+                        // filmTypeCss
+                        for (var i=1;i<[[${leoFilmTypeList.size()}]];i++) {
+                            if ($("#leoFilmType" + i).val()==[[${backType}]]) {
+                                $("#leoFilmType" + i).attr("checked", "checked")
+                                $("#leoFilmType" + i).parent().attr("class", "activate")
+                                if ($("#leoFilmType" + i).is(':checked')) {
+                                    $("#leoFilmType0").parent().removeClass("activate")
+                                }
+                            }
+                        }
+                        function typeClick(){
+                            for (var i=0;i<[[${leoFilmTypeList.size()+1}]];i++) {
+                                if ($("#leoFilmType" + i).is(':checked')) {
+                                    for(var j=0;j<i;j++){
+                                        $("#leoFilmType" + j).parent().removeClass("activate")
+                                    }
+                                    for(var k=[[${leoFilmTypeList.size()+1}]];k>i;k--){
+                                        $("#leoFilmType" + k).parent().removeClass("activate")
+                                    }
+                                    $("#leoFilmType" + i).parent().attr("class", "activate")
+                                }
+                            }
+                        }
+                        //filmCountryCss
+                        for (var i=1;i<[[${leoFilmCountryList.size()}]];i++) {
+                            if ($("#leoFilmCountry" + i).val()==[[${backCountry}]]) {
+                                $("#leoFilmCountry" + i).attr("checked", "checked")
+                                $("#leoFilmCountry" + i).parent().attr("class", "activate")
+                                if ($("#leoFilmCountry" + i).is(':checked')) {
+                                    $("#leoFilmCountry0").parent().removeClass("activate")
+                                }
+                            }
+                        }
+                        function countryClick(){
+                            for (var i=0;i<[[${leoFilmCountryList.size()+1}]];i++) {
+                                if ($("#leoFilmCountry" + i).is(':checked')) {
+                                    for(var j=0;j<i;j++){
+                                        $("#leoFilmCountry" + j).parent().removeClass("activate")
+                                    }
+                                    for(var k=[[${leoFilmCountryList.size()+1}]];k>i;k--){
+                                        $("#leoFilmCountry" + k).parent().removeClass("activate")
+                                    }
+                                    $("#leoFilmCountry" + i).parent().attr("class", "activate")
+                                }
+                            }
+                        }
+                        //filmLanguageCss
+                        for (var i=1;i<[[${leoFilmLanguageList.size()}]];i++) {
+                            if ($("#leoFilmLanguage" + i).val()==[[${backLanguage}]]) {
+                                $("#leoFilmLanguage" + i).attr("checked", "checked")
+                                $("#leoFilmLanguage" + i).parent().attr("class", "activate")
+                                if ($("#leoFilmLanguage" + i).is(':checked')) {
+                                    $("#leoFilmLanguage0").parent().removeClass("activate")
+                                }
+                            }
+                        }
+                        function languageClick(){
+                            for (var i=0;i<[[${leoFilmLanguageList.size()+1}]];i++) {
+                                if ($("#leoFilmLanguage" + i).is(':checked')) {
+                                    for(var j=0;j<i;j++){
+                                        $("#leoFilmLanguage" + j).parent().removeClass("activate")
+                                    }
+                                    for(var k=[[${leoFilmLanguageList.size()+1}]];k>i;k--){
+                                        $("#leoFilmLanguage" + k).parent().removeClass("activate")
+                                    }
+                                    $("#leoFilmLanguage" + i).parent().attr("class", "activate")
+                                }
+                            }
+                        }
+                        //filmFormCss
+                        for (var i=1;i<[[${leoFilmFormList.size()}]];i++) {
+                            if ($("#leoFilmForm" + i).val()==[[${backForm}]]) {
+                                $("#leoFilmForm" + i).attr("checked", "checked")
+                                $("#leoFilmForm" + i).parent().attr("class", "activate")
+                                if ($("#leoFilmForm" + i).is(':checked')) {
+                                    $("#leoFilmForm0").parent().removeClass("activate")
+                                }
+                            }
+                        }
+                        function formClick(){
+                            for (var i=0;i<[[${leoFilmFormList.size()+1}]];i++) {
+                                if ($("#leoFilmForm" + i).is(':checked')) {
+                                    for(var j=0;j<i;j++){
+                                        $("#leoFilmForm" + j).parent().removeClass("activate")
+                                    }
+                                    for(var k=[[${leoFilmFormList.size()+1}]];k>i;k--){
+                                        $("#leoFilmForm" + k).parent().removeClass("activate")
+                                    }
+                                    $("#leoFilmForm" + i).parent().attr("class", "activate")
+                                }
+                            }
+                        }
+
+                        if($("#sort1").val()==[[${sort}]]){ $("#sort1").attr("checked","checked"); }
+                        if($("#sort2").val()==[[${sort}]]){ $("#sort2").attr("checked","checked"); }
+                        if($("#sort3").val()==[[${sort}]]){ $("#sort3").attr("checked","checked"); }
+
+                    </script>
+                    <div class="list-wp">
+                        <div class="list">
+                            <a th:each="leoFilm : ${pageInfo.list}"
+                               class="item"th:href="@{/intro/filmDetail(id=${leoFilm.leoFilmId})}">
+                                <div class="cover-wp">
+                                    <img style="width: 115px;height: 160px;" th:src="${leoFilm.leoFilmCover}" th:alt="${leoFilm.leoFilmName}">
+                                </div>
+                                <p>
+                                    <span th:text="${leoFilm.leoFilmName}"></span>
+                                    <strong><span th:text="${leoFilm.leoFilmScore} "></span></strong>
+                                </p>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="paginator">
+
+<!--                        <a th:href="@{/intro/allSort(leoFilmForm='电影')}">首页</a>-->
+                        <a th:href="@{/intro/allSort(pageNum=${pageInfo.pageNum-1},leoFilmType=${backType},leoFilmCountry=${backCountry},leoFilmLanguage=${backLanguage},leoFilmForm=${backForm},sort=${sort})}">  < &lt;前页 </a>
+                        <span th:each="pageNum : ${pageInfo.navigatepageNums}">
+
+                            <span th:if="${pageNum!=pageInfo.pageNum}" >
+                                <a th:href="@{/intro/allSort(pageNum=${pageNum},leoFilmType=${backType},leoFilmCountry=${backCountry},leoFilmLanguage=${backLanguage},leoFilmForm=${backForm},sort=${sort})}">
+                                <span th:text="${pageNum}"></span>
+                                </a>
+                            </span>
+
+                            <span th:if="${pageNum==pageInfo.pageNum}" >
+                                <a th:href="@{/intro/allSort(pageNum=${pageNum},leoFilmType=${backType},leoFilmCountry=${backCountry},leoFilmLanguage=${backLanguage},leoFilmForm=${backForm},sort=${sort})}" style="background-color: #83BF73;width: 15px; height: 16px">
+                                <span th:text="${pageNum}" style="color: white" ></span>
+                                </a>
+                            </span>
+
+                        </span>
+
+
+                        <a th:href="@{/intro/allSort(pageNum=${pageInfo.pageNum+1},leoFilmType=${backType},leoFilmCountry=${backCountry},leoFilmLanguage=${backLanguage},leoFilmForm=${backForm},sort=${sort})}">后页&gt; ></a>
+<!--                        <a th:href="@{/intro/allSort(pageNum=${pageInfo.pages},leoFilmForm='电影')}">尾页</a>-->
+
+
+                        <span class="count">(共[[${pageInfo.Total}]]条)</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

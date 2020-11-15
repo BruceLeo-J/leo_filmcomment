@@ -1,0 +1,87 @@
+
+        .review{overflow:hidden;zoom:1;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid #eaeaea;}
+        .review-hd{float:left;width:68px;}
+        .review-hd img{width:68px;}
+        .review-bd{padding-left:83px;}
+        .review-bd h3{margin:0;height:auto;background:none;}
+        .review-bd .review-meta{color:#666;padding:5px 0;}
+        .review-bd .review-meta a{color:#666;}
+        .review-bd .review-meta a:hover {color:#fff;}
+        .review-bd .review-content{line-height:20px;}
+        #reviews .last{border:0 none;}
+    
+        .rating_answer {
+            margin: 0 0 20px;
+            padding: 12px 0 12px 18px;
+            line-height: 1.5;
+            background: #f2f7f6;
+            border-radius: 4px;
+            width: 282px;
+        }
+        .rating_answer ul {
+            font-size: 14px;
+            color: #cedcd9;
+        }
+        .rating_answer li {
+            list-style: none;
+            font-size: 13px;
+        }
+    
+    #content .hot_link h2 {
+        margin: 0;
+        padding: 0;
+        border: 0 none;
+        color: #072;
+    }
+    .hot_link {
+        margin: 0 0 20px;
+        padding: 16px 0 16px 18px;
+        line-height: 1.5;
+        background: #f2f7f6;
+        border-radius: 4px;
+        width: 282px;
+    }
+    .hot_link ul {
+        font-size: 14px;
+        list-style: disc inside;
+        color: #cedcd9;
+    }
+    .hot_link li {
+        margin-top: 8px;
+        list-style: none;
+        font-size: 13px;
+    }
+  
+        #billboard td{border-bottom:1px solid #eaeaea}#billboard td{padding:7px 0}#billboard .order{width:20px;font-size:9px;text-align:center}#billboard .title{width:290px}#billboard .up,#billboard .down,#billboard .stay{display:block;color:#999;width:20px;height:12px;font-size:9px;padding-left:15px;background:url(../images/movie_top_1.gif) no-repeat;overflow:hidden;line-height:13px}#billboard .up{background-position:0 0}#billboard .down{background-position:0 -11px}#billboard .stay{background-position:0 -23px}
+
+    
+        #doulist h2 {
+          border-bottom: none;
+          padding-bottom: 0;
+          margin-bottom: 10px;
+        }
+        .icon-on-air{
+            font-size:12px;
+            margin-left:15px;
+            background-color:#71B5DE;
+            color:#fff;
+            padding:3px 5px;
+            border-radius:3px;
+            white-space: nowrap;
+        }
+
+        #doulist{margin-bottom:40px;}
+        #doulist ul{border-top:1px solid #eee;}
+        #doulist ul li{position:relative;padding:15px 0;border-bottom:1px solid #eee; zoom:1;}
+        #doulist a{font-size:13px;}
+        #doulist .title{width:247px}
+        #doulist li span{font-size:13px;float:right;color:#999;}
+    
+        #contact-and-cooperation li{line-height:24px;}
+        #contact-and-cooperation .mail{width:150px;}
+        #contact-and-cooperation img{height:14px;margin-top:-2px;vertical-align: middle;}
+        #contact-and-cooperation .new {height: auto;margin-top: -3px;}
+    
+        .contact{margin-top:25px}.contact h2{color:#222;border-bottom:1px solid #E4E2E2;font-size:14px;line-height:25px}.contact img{max-width:none}ul.embassy-list li{width:60px;float:left;font-size:12px;text-align:center}ul.embassy-list li a.primary-link{font-size:12px;line-height:12px}ul.embassy-list li .icon-embassy-film-pro{display:block;width:40px;height:40px;margin:0 auto 5px auto;background:url(../images/home_film_pro%402x.jpg) no-repeat;background-size:contain}ul.embassy-list li .icon-embassy-weibo{display:block;width:40px;height:40px;margin:0 auto 5px auto;background-image:url(../images/home_weibo.png);background-image:-webkit-image-set(url(../images/home_weibo.png) 1x, url(../images/home_weibo%402x.jpg) 2x);background-image:-moz-image-set(url(../images/home_weibo.png) 1x, url(../images/home_weibo%402x.jpg) 2x);background-image:-ms-image-set(url(../images/home_weibo.png) 1x, url(../images/home_weibo%402x.jpg) 2x);background-image:-o-image-set(url(../images/home_weibo.png) 1x, url(../images/home_weibo%402x.jpg) 2x)}ul.embassy-list li .icon-embassy-club-site{display:block;position:relative;width:40px;height:40px;margin:0 auto 5px auto;background:url(../images/home_club%402x.jpg) no-repeat;background-size:contain}ul.embassy-list li .icon-embassy-bite-me{display:block;position:relative;width:40px;height:40px;margin:0 auto 5px auto;background:url(../images/bite_me%402x.jpg) no-repeat;background-size:contain}ul.embassy-list li .icon-embassy-weixin{display:block;position:relative;width:40px;height:40px;margin:0 auto 5px auto;background-image:url(../images/home_weixin.png);background-image:-webkit-image-set(url(../images/home_weixin.png) 1x, url(../images/home_weixin%402x.jpg) 2x);background-image:-moz-image-set(url(../images/home_weixin.png) 1x, url(../images/home_weixin%402x.jpg) 2x);background-image:-ms-image-set(url(../images/home_weixin.png) 1x, url(../images/home_weixin%402x.jpg) 2x);background-image:-o-image-set(url(../images/home_weixin.png) 1x, url(../images/home_weixin%402x.jpg) 2x)}ul.embassy-list li .icon-embassy-weixin .hover{display:none}ul.embassy-list li .icon-embassy-weixin:hover .hover{display:block;position:absolute;top:65px;left:-7px;z-index:1}.home-qrcode{width:130px;height:130px}
+
+    

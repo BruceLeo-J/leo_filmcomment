@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.2</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi"/>
+    <link rel="stylesheet" th:href="@{/admin/css/font.css}">
+    <link rel="stylesheet" th:href="@{/admin/css/xadmin.css}">
+    <link rel="stylesheet" th:href="@{/admin/css/layui.css}" media="all"> <!--注意-->
+    <script th:src="@{/admin/lib/layui/layui.js}" charset="utf-8"></script>
+    <script type="text/javascript" th:src="@{/admin/js/xadmin.js}"></script>
+    <script type="text/javascript" th:src="@{/admin/js/xm-select.js}"></script>
+    <script type="text/javascript" th:src="@{/admin/js/jquery.min.js}"></script>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]--></head>
+<body>
+<form id="layeditForm">
+    <div class="layui-form-item" style="margin-top: 30px;">
+        <label class="layui-form-label"><span class="x-red">*</span>影刊标题：</label>
+        <div class="layui-input-inline">
+            <input type="text" id="leoJournalTitle" name="leoJournalTitle" class="layui-input" required lay-verify="required" autocomplete="off" style="width: 500px;">
+        </div>
+    </div>
+<textarea id="demo" name="leoJournalContent"  style="display: none;"></textarea>
+<button style="margin-left: 100px; margin-top: 20px; width: 100px; height: 40px;" class="layui-btn" lay-submit lay-filter="add" >现在发布</button>  <!--lay-submit=""不能丢！！-->
+</form>
+<script>
+
+    layui.use(['layedit','form'], function(){
+
+        var layedit = layui.layedit;
+//注意：layedit.set 一定要放在 build 前面，否则配置全局接口将无效。
+        layedit.set({
+            uploadImage: {
+                url: '/journal/uploadFile',
+                field: 'file',//上传时的文件参数字段名
+                accept: 'image',
+                acceptMime: 'image/*',
+                exts: 'jpg|png|gif|bmp|jpeg',
+                size: 1024 * 1024 * 1024,
+            }
+        });
+        var index = layedit.build('demo',{
+            height:400
+        }); //建立编辑器         可选参数，例： layedit.build('demo',{uploadImage:{}});
+
+        var form = layui.form;
+        form.on('submit(add)',function (data) {
+
+            layedit.sync(index)  //用于同步编辑器内容到textarea（一般用于异步提交）
+            //发异步，把数据提交给java
+            $.ajax({
+                type: 'POST',
+                url: '/journal/submitJournalForm',
+                data: $("#layeditForm").serialize(),
+                success: function () {
+                    layer.alert("发布成功")
+                }
+            });
+        });
+    });
+
+</script>
+</body>
+</html>

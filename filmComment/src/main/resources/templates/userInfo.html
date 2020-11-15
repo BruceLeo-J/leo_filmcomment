@@ -1,0 +1,372 @@
+<html lang="zh-CN" class="ua-windows ua-webkit">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="https://www.douban.com/j/doumail/num?callback=jsonp_zqwktd25ziw121x" async=""></script>
+    <script src="https://www.douban.com/j/notification/num?callback=jsonp_tl5fei272p3zsq5" async=""></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <meta name="google-site-verification" content="ok0wCgT20tBBgo9_zat2iAcimtN4Ftf5ccsh092Xeyw">
+    <title>
+        个人主页
+    </title>
+
+    <meta http-equiv="mobile-agent" content="format=html5; url=https://www.douban.com/people/144948388/">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+
+    <link href="https://img3.doubanio.com/f/shire/859dba5cddc7ed1435808cf5a8ddde5792cd6e0c/css/douban.css"
+          rel="stylesheet" type="text/css">
+    <link href="https://img3.doubanio.com/f/sns/ff1d4c0201bc06a58b72e2157477822dc8cd4d76/css/sns/people/base.css"
+          rel="stylesheet" type="text/css">
+    <script type="text/javascript" defer="" async="" src="https://img3.doubanio.com/dae/fundin/piwik.js"></script>
+    <script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-5WP579"></script>
+    <script type="text/javascript">var _head_start = new Date();</script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/72ced6df41d4d158420cebdd254f9562942464e3/js/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/77323ae72a612bba8b65f845491513ff3329b1bb/js/do.js"
+            data-cfg-autoload="false"></script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/5ecaf46d6954d5a30bc7d99be86ae34031646e00/js/douban.js"></script>
+
+
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/8928fac47812097d7cfeae85b9f4c7f7815078b1/js/follow.js"></script>
+    <script type="text/javascript"> mine_page_url = "/j/mine/page";</script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/95c1eb7ba2dab66b1d020425d9a189496247e95e/js/jquery-ui-sortable.js"></script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/sns/3597dce4be4649c9c8f4bd19562e7548f53e300e/js/sns/mine_dragdrop.js"></script>
+
+    <link rel="alternate" href="https://www.douban.com/feed/people/144948388/interests" type="application/rss+xml">
+    <link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/79626c9d888b9d2c.css">
+    <link href="https://img3.doubanio.com/f/sns/0b87750e2c4ad7dd4db909726dea7de1f9b939f7/css/sns/people/index.css"
+          rel="stylesheet" type="text/css">
+    <script type="text/javascript"></script>
+
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+    <script src="https://ssl.google-analytics.com/ga.js" async="true"></script>
+</head>
+<body>
+
+
+<script type="text/javascript">var _body_start = new Date();</script>
+
+
+<link href="//img3.doubanio.com/dae/accounts/resources/19870c3/shire/bundle.css" rel="stylesheet" type="text/css">
+
+
+<div id="db-global-nav" class="global-nav">
+    <div class="bd">
+
+        <div class="top-nav-info">
+            <ul>
+                <li class="nav-user-account">
+                    <a target="_blank" href="https://accounts.douban.com/passport/setting/" class="bn-more">
+                        <span><span th:text="${leoUser.leoUserName}"></span>的帐号</span><span class="arrow"></span>
+                    </a>
+                    <div class="more-items">
+                        <table cellpadding="0" cellspacing="0">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <a th:href="@{/userInfo(leoUserId=${leoUser.leoUserId})}">个人主页</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a th:href="@{/modifyUserInfo(leoUserId=${leoUser.leoUserId})}">帐号管理</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="/logout">退出</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="global-nav-items">
+            <ul>
+                <li class="">
+                    <a th:href="@{/intro/main}" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-main&quot;,&quot;uid&quot;:&quot;0&quot;}">品位如你！欢迎加入豆瓣社区，请在此开始你的电影人生 ~ </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<script src="//img3.doubanio.com/dae/accounts/resources/19870c3/shire/bundle.js" defer="defer"></script>
+
+
+<link href="//img3.doubanio.com/dae/accounts/resources/19870c3/sns/bundle.css" rel="stylesheet" type="text/css">
+
+
+<div id="db-nav-sns" class="nav">
+    <div class="nav-wrap">
+        <div class="nav-primary">
+
+            <div class="nav-logo">
+                <a th:href="@{intro/main}">豆瓣社区</a>
+            </div>
+            <!--<div class="nav-search">
+                <form action="https://www.douban.com/search" method="get">
+                    <fieldset>
+                        <legend>搜索：</legend>
+                        <label for="inp-query" style="display: none;">搜索你感兴趣的内容和人...</label>
+                        <div class="inp">
+                            <input type="hidden" name="source" value="suggest">
+                            <input id="inp-query" name="q" size="22" maxlength="60" autocomplete="off" value=""
+                                   placeholder="搜索你感兴趣的内容和人...">
+                        </div>
+                        <div class="inp-btn"><input type="submit" value="搜索"></div>
+                    </fieldset>
+                </form>
+            </div>-->
+
+            <div class="nav-items">
+                <ul>
+                    <li><a href="/intro/main">首页</a></li>
+                    <li><a href="/intro/main">我的豆瓣</a></li>
+                    <li>
+                        <a href="/intro/willRelease">
+                            最新预告
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/journal/journalList">
+                            浏览影刊
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="//img3.doubanio.com/dae/accounts/resources/19870c3/sns/bundle.js" defer="defer"></script>
+
+
+<div id="wrapper">
+
+
+    <div id="content">
+
+
+        <div class="grid-16-8 clearfix">
+
+
+            <div class="article drop-area ui-sortable">
+
+
+                <div id="db-usr-profile" class="clearfix">
+
+                    <div class="pic">
+                        <a href="">
+                            <img th:src="${leoUser.leoUserImage}" style="width: 48px;height: 48px" >
+                        </a>
+                    </div>
+                    <div class="info">
+                        <h1>
+                            <span th:text="${leoUser.leoUserName}"></span>
+
+
+                            <div id="edit_signature" class="j a_edit_signature edtext pl">
+                                <span id="display" style="display: inline;"></span>
+                                <span id="edi" style="display: inline">
+        (<a class="sign-text" href="javascript:void(0);">添加签名档</a>)
+    </span>
+                                <form style="display: none;" action="/j/people/144948388/edit_signature"
+                                      name="edit_sign" method="post">
+                                    <div style="display:none;"><input type="hidden" name="ck" value="0dyg"></div>
+                                    <input name="signature" type="text" size="30" maxlength="30" value="">
+                                    <input class="submit" type="submit" value="修改">
+                                    <input class="cancel" type="button" value="取消">
+                                </form>
+                                <span id="error" class="attn" style="display: none;"></span>
+                            </div>
+
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="sort " id="movie">
+
+
+                    <h2>
+                        我看
+                        &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                        <span class="pl">&nbsp;(
+                    <a  th:href="@{/intro/myCollectFilm(collectStatus=想看)}" ><span th:text="${leoFilmFiveWantSee.size()}"></span>部想看</a>&nbsp;·&nbsp;<a
+                        th:href="@{/intro/myCollectFilm(collectStatus=看过)}" ><span th:text="${leoFilmFiveSeen.size()}"></span>部看过</a>
+                ) </span>
+                    </h2>
+                    <div class="obssin">
+                        <div class="substatus">想看</div>
+                        <ul>
+                            <li class="aob" th:each="WantSee : ${leoFilmFiveWantSee}">
+                                <a th:title="${WantSee.leoFilmName}" th:href="@{/intro/filmDetail(id=${WantSee.leoFilmId})}">
+                                <img th:src="${WantSee.leoFilmCover}"  class="climg" th:alt="${WantSee.leoFilmName}">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="obssin">
+                        <div class="substatus">看过</div>
+                        <ul>
+                            <li class="aob" th:each="Seen : ${leoFilmFiveSeen}">
+                                <a th:title="${Seen.leoFilmName}"  th:href="@{/intro/filmDetail(id=${Seen.leoFilmId})}">
+                                <img th:src="${Seen.leoFilmCover}" class="climg" th:alt="${Seen.leoFilmName}"></a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+               <!-- <div class="sort " id="photo">
+                    <h2>
+                        我的相册
+                        &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                        <span class="pl">&nbsp;(
+                
+                <a href="https://www.douban.com/people/144948388/photos" target="_self">创建1</a>&nbsp;·&nbsp;<a
+                                    href="https://www.douban.com/people/144948388/album/collect" target="_self">关注0</a>
+                ) </span>
+                    </h2>
+                    <div class="photo-btns">
+                        <span class="btn-pic-upload"><a class="lnk-create "
+                                                        href="https://www.douban.com/photos/album/upload"><i>+</i>发照片</a></span>
+                        <span class="btn-pic-upload"><a class="lnk-create lnk-create-album "
+                                                        href="https://www.douban.com/photos/album/upload#new_album"><i>+</i>新建相册</a></span>
+
+                    </div>
+                    <div>
+
+                        <div class="photoin">
+                            <a class="nbg" href="https://www.douban.com/photos/album/1683896095/" title="第一个相册"
+                               alt="第一个相册">
+                                <img src="https://img3.doubanio.com/pics/photo_album_thumb.png" class="album_s">
+                            </a>
+                            <div class="ll pl" style="padding-top:8px;width:138px">
+                                <a href="https://www.douban.com/photos/album/1683896095/">第一个相册</a>
+                                <br>2019-01-13更新
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>-->
+                <div class="sort " id="board">
+                    <script type="text/javascript"
+                            src="https://img3.doubanio.com/f/shire/072a17e1a083e85fab3d9bb187de25d07c97f544/js/report_dialog.js"></script>
+                    <link rel="stylesheet" type="text/css"
+                          href="https://img3.doubanio.com/f/shire/b45aa277f8b8df40596b96582dafb1ed0a899a64/css/report_dialog.css">
+
+                </div>
+            </div>
+            <div class="aside drop-area ui-sortable">
+                <div id="profile">
+                    <div class="infobox" >
+                        <div class="ex1"><span></span></div>
+                        <div class="bd" >
+
+                            <div class="basic-info" >
+
+                                <img th:src="${leoUser.leoUserImage}" class="userface" style="width: 170px; height: 170px">
+                                <div class="user-info">
+                                    常居:&nbsp;<a href="https://www.douban.com/location/fuzhou/">福建福州</a><br>
+                                    <div class="pl">2020-10-23加入</div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="sep-line"></div>
+                            <div class="user-intro">
+
+
+                                <div id="edit_intro" class="j edtext pl">
+
+                                    <span id="intro_display">时刻记得保持清醒</span>
+                                    <span id="intro_disp_act" style="display: inline">
+            (<a class="" href="#">
+                编辑
+            </a>)
+        </span>
+
+                                    <form style="display: none;" action="/j/people/144948388/edit_intro"
+                                          name="edit_intro" mothod="post">
+                                        <textarea name="intro" style="overflow: hidden;">时刻记得保持清醒</textarea><br>
+                                        <input id="intro_submit" class="submit" type="submit" value="保存">
+                                        <input id="intro_cancel" class="cancel" type="button" value="取消">
+                                        <div style="position: absolute; display: none; overflow-wrap: break-word; font-weight: 400; width: 282px; font-family: Arial; line-height: normal; font-size: 12px; padding: 3px;">
+                                            时刻记得保持清醒&nbsp;
+                                        </div>
+                                    </form>
+
+                                    <span id="intro_error" class="attn" style="display: none;"></span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="ex2"><span></span></div>
+                    </div>
+
+
+                </div>
+
+
+                <script src="https://img3.doubanio.com/f/shire/d0eb00d8781aeb03e0351d1647d7fc58e0a6ef53/js/jquery_plugin/jquery.elastic.js"></script>
+
+                <!--
+
+                <div id="friend">
+
+                    <h2>
+                        我的关注
+                            &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                            <span class="pl">&nbsp;(
+
+                                <a href="https://www.douban.com/contacts/list" target="_self">成员15</a>&nbsp;·&nbsp;<a href="https://www.douban.com/people/144948388/contact_site" target="_self">小站0</a>
+                                ) </span>
+                    </h2>
+
+                <dl class="obu"><dt><a href="https://www.douban.com/people/47839725/" class="nbg"><img src="https://img3.doubanio.com/icon/u47839725-2.jpg" class="m_sub_img" alt="ansr3"></a></dt>
+                                    <dd><a href="https://www.douban.com/people/47839725/">ansr3</a></dd></dl><dl class="obu"><dt><a href="https://www.douban.com/people/54484674/" class="nbg"><img src="https://img9.doubanio.com/icon/u54484674-4.jpg" class="m_sub_img" alt="TDK"></a></dt>
+                                    <dd><a href="https://www.douban.com/people/54484674/">TDK</a></dd></dl><dl class="obu"><dt><a href="https://www.douban.com/people/luhua/" class="nbg"><img src="https://img1.doubanio.com/icon/u1329080-9.jpg" class="m_sub_img" alt="芦哲峰"></a></dt>
+                                    <dd><a href="https://www.douban.com/people/luhua/">芦哲峰</a></dd></dl><dl class="obu"><dt><a href="https://www.douban.com/people/quanzhouren/" class="nbg"><img src="https://img1.doubanio.com/icon/u47287341-17.jpg" class="m_sub_img" alt="曾于里"></a></dt>
+                                    <dd><a href="https://www.douban.com/people/quanzhouren/">曾于里</a></dd></dl><dl class="obu"><dt><a href="https://www.douban.com/people/gotothefield/" class="nbg"><img src="https://img1.doubanio.com/icon/u44481734-9.jpg" class="m_sub_img" alt="fushia"></a></dt>
+                                    <dd><a href="https://www.douban.com/people/gotothefield/">fushia</a></dd></dl><dl class="obu"><dt><a href="https://www.douban.com/people/jiechengzongshi/" class="nbg"><img src="https://img9.doubanio.com/icon/u2759225-6.jpg" class="m_sub_img" alt="扬酱和祀夜"></a></dt>
+                                    <dd><a href="https://www.douban.com/people/jiechengzongshi/">扬酱和祀夜</a></dd></dl><dl class="obu"><dt><a href="https://www.douban.com/people/whiskii/" class="nbg"><img src="https://img2.doubanio.com/icon/u2756079-83.jpg" class="m_sub_img" alt="w"></a></dt>
+                                    <dd><a href="https://www.douban.com/people/whiskii/">w</a></dd></dl><dl class="obu"><dt><a href="https://www.douban.com/people/173216464/" class="nbg"><img src="https://img1.doubanio.com/icon/u173216464-78.jpg" class="m_sub_img" alt="陶虹"></a></dt>
+                                    <dd><a href="https://www.douban.com/people/173216464/">陶虹</a></dd></dl><br clear="all">
+
+                </div>
+                    <p class="rev-link"><a href="/contacts/rlist">&gt;&nbsp;我被0人关注</a></p>-->  <!--我的关注-->
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<script type="text/javascript" src="https://img3.doubanio.com/misc/mixed_static/23ce1f53390dae1b.js"></script>
+<script type="text/javascript" src="https://img3.doubanio.com/misc/mixed_static/79f2b1c124a5ed42.js"></script>
+
+
+
+
+<div id="db-tagsug-list" class="suggest-overlay"></div>
+<div id="qb-sougou-search" style="display: none; opacity: 0;"><p>搜索</p>
+    <p class="last-btn">复制</p>
+    <iframe src=""></iframe>
+</div>
+</body>
+</html>

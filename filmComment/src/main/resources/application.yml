@@ -1,0 +1,29 @@
+#debug=true  查看哪些自动配置类生效了，哪些没有生效。
+server:
+    port: 8888
+    max-http-header-size: 10000000
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/leo_filmcomment?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+# 分页配置
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+#reids配置
+redis:
+  host: 127.0.0.1 # Redis服务器地址
+  port: 6379 # Redis服务器连接端口
+
+

@@ -1,0 +1,327 @@
+<html lang="zh-CN" class="ua-windows ua-webkit">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <meta name="referrer" content="no-referrer" />
+    <meta name="google-site-verification" content="ok0wCgT20tBBgo9_zat2iAcimtN4Ftf5ccsh092Xeyw">
+    <title>福州影讯</title>
+
+    <meta name="baidu-site-verification" content="cZdR4xxR7RxmM4zE">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+
+    <meta name="keywords" content="福州,影讯,排片,放映时间,电影票价">
+    <meta name="description" content="福州影讯,福州电影院排片及放映时间,电影票价查询">
+
+    <link rel="apple-touch-icon" href="/pics/movie/apple-touch-icon.png">
+    <link href="https://img3.doubanio.com/f/shire/859dba5cddc7ed1435808cf5a8ddde5792cd6e0c/css/douban.css" rel="stylesheet" type="text/css">
+    <link href="https://img3.doubanio.com/f/shire/db02bd3a4c78de56425ddeedd748a6804af60ee9/css/separation/_all.css" rel="stylesheet" type="text/css">
+    <link href="https://img3.doubanio.com/f/epstein/85f16e2319c370ecd16bbca53d5d006adaa99728/css/movie/base/init.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" defer="" async="" src="https://img3.doubanio.com/dae/fundin/piwik.js"></script><script type="text/javascript" src="//img1.doubanio.com/ZGJhYzhmaC9mL2FkanMvOTY0ZDI5MjQ5N2ViOGI2ZGU3ODdkYmI3YTk3NDliMTJlMzNmMGNlYy9hZC5yZWxlYXNlLmpz" async="true"></script><script type="text/javascript">var _head_start = new Date();</script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/epstein/0495cb173e298c28593766009c7b0a953246c5b5/js/movie/lib/jquery.js"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/5ecaf46d6954d5a30bc7d99be86ae34031646e00/js/douban.js"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/0efdc63b77f895eaf85281fb0e44d435c6239a3f/js/separation/_all.js"></script>
+
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/77323ae72a612bba8b65f845491513ff3329b1bb/js/do.js" data-cfg-autoload="false"></script>
+    <script type="text/javascript">
+        Do.add('hotCities', {path: "https://img3.doubanio.com/f/epstein/2796f81f0ac4cc7bcd75368ab12a341ed81449b4/js/movie/hot_cities.js", type: 'js'});
+    </script>
+
+    <style type="text/css">
+    h1 {display:none;}
+    h2 {border-bottom: 1px solid #eee; color: #111;padding-bottom: 5px;}
+    #ghostTit {display:block; padding-bottom:15px;}
+    #location{font-size:12px; display:inline; position:relative; z-index:99; font-weight:normal;}
+    #location a{display:inline; font-weight:normal;}
+    .article .hd{margin-bottom:15px;}
+    .article h2{vertical-align:top;display:inline-block;*display:inline;zoom:1;}
+    .hd {border-bottom: 1px solid #eee; color: #111;padding-bottom: 5px;}
+    #news .hd {border-bottom: 0; padding-bottom: 0px;}
+    .hd h2{border: 0 none; margin:0;}
+    .tab-hd{display:inline-block;width:300px;*display:inline;zoom:1;height:21px;line-height:21px;vertical-align:top; margin-left: 20px;}
+    .tab-hd li{display:inline-block;*display:inline;zoom:1;margin-right:20px;cursor:pointer;}
+    .tab-hd .on{background-color:#69c;color:#fff;padding:0 10px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;}
+    .tab-bd .mod{position:relative;display:inline-block;*display:inline;zoom:1;width:215px;padding:0 10px 25px 115px;border-bottom:1px dashed #ddd;margin-bottom:32px;vertical-align:top;height:154px;}
+    .tab-bd .odd {padding:0 0 25px 130px; width:150px;}
+    .tab-bd img {display:block;width:100px;}
+    .article .thumb{position:absolute;left:0;top:0;overflow:hidden;}
+    .tab-bd .odd .thumb{left:15px;}
+    h3{background:none;margin:-4px 0 10px 0; *margin-top:0; padding:0;height:auto;}
+    .intro li{line-height:22px;color:#666;}
+    .intro li.dt {line-height:18px;}
+    .intro li.last{margin-bottom:10px;}
+    .intro .star span{color:#FF5433;padding-left:55px;}
+    .article p{background:#f5f5f5; padding:10px 15px; border-radius:2px; width:170px; margin:0;}
+    .article p a{font-size:14px;}
+    .intro .rating{line-height:12px;}
+    .search-cinemas{position:relative; }
+    #search-results{position:absolute;left:0;top:58px;display:none;width:310px;border:1px solid #e0e0e0;z-index:50;background-color:#fff;color:#A19E9B;}
+    #search-results li{line-height:24px;cursor:pointer;font-size:14px;padding:5px 0 5px 10px;}
+    #search-results li p{margin:0;font-size:12px;}
+    #search-results a{color:#A19E9B;}
+    #search-results a em{color:#333;font-weight:700;font-style:normal;}
+    #search-results a:hover{background:none;}
+    #search-results .hover{background-color:#f5f5f5;border:0 none;}
+    .search-cinemas .txt-search{border:1px solid #E0E0E0;padding:5px 2px;color:#A19E9B;color:#333;width:200px;}
+    .search-cinemas .tip{color:#A19E9B;}
+    .search-cinemas .btn-submit{border:1px solid #CBCBCB;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;color:#424242;padding:3px 5px;cursor:pointer;background:-moz-linear-gradient(top, #fafafa, #ededed);background:-webkit-linear-gradient(top, #fafafa, #ededed);background:-webkit-gradient(linear, 0 0, 0 100%, from(#fafafa), to(#ededed));}
+    #showing-now{display:none;}
+    #location{position:relative;margin-bottom:30px;}
+    #location-name .tit{margin-right:10px;font-size:14px;font-weight:700;color:#111;}
+    #location-name  a{margin:0 2px;}
+    #location-name .icon{background:url("//img3.doubanio.com/pics/movie_subject_arrow.png") no-repeat center center;padding:0 6px;}
+    .trailer_icon:link,
+    .trailer_icon:visited,
+    .trailer_icon:hover,
+    .trailer_icon:active {_display:block; _width:40px; color:#369; padding:5px 22px 5px 0; background:url(//img3.doubanio.com/pics/movie_trailer_icon3.png) right 2px no-repeat;}
+    .toggleCities{top:25px; *top:35px; left:-25px;}
+    #cities-list {left: -23px;}
+
+    .tab-hd .on{background-color:#649FC8;}
+</style>
+    <style type="text/css">img { max-width: 100%; }</style>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/44752e8136fad978.css">
+
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+<script src="https://ssl.google-analytics.com/ga.js" async="true"></script></head>
+
+<body>
+
+    <script type="text/javascript">var _body_start = new Date();</script>
+
+
+
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/19870c3/shire/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+<div id="db-global-nav" class="global-nav">
+  <div class="bd">
+
+<div class="top-nav-info">
+  <a href="https://accounts.douban.com/passport/login?source=main" class="nav-login" rel="nofollow">登录/注册</a>
+</div>
+
+      <div class="global-nav-items">
+          <ul>
+              <li class="">
+                  <a th:href="@{/intro/main}" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-main&quot;,&quot;uid&quot;:&quot;0&quot;}">品位如你！欢迎加入豆瓣社区，请在此开始你的电影人生 ~ </a>
+              </li>
+          </ul>
+      </div>
+
+  </div>
+</div>
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/19870c3/shire/bundle.js" defer="defer"></script>
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/19870c3/movie/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+
+    <div id="db-nav-movie" class="nav">
+        <div class="nav-wrap" style="margin-left: 365px">
+            <div class="nav-primary" >
+                <div class="nav-logo" >
+                    <a th:href="@{/intro/main}">利欧电影</a>
+                </div>
+                <div class="nav-search">
+                    <form action="/intro/searchFilm" method="get">
+                        <fieldset>
+                            <legend>搜索：</legend>
+                            <label for="inp-query">
+                            </label>
+                            <div class="inp"><input id="inp-query" name="searchKey" size="22" maxlength="60"
+                                                    placeholder="搜索电影、电视剧、综艺..." autocomplete="off"></div>
+                            <div class="inp-btn"><input type="submit" value="搜索"></div>
+                            <input type="hidden" name="cat" value="1002"/>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="nav-secondary">
+
+
+            <div class="nav-items" style="margin-left: 50px;">
+                <ul style="padding-left: 80px" >
+                    <li style="margin-left: 10px;"><a href="/intro/willRelease"
+                    >即将上映</a>
+                    </li>
+                    <li style="margin-left: 70px;"><a href="/intro/pickFilm?leoFilmForm=电影&sort=hot"
+                    >选电影</a>
+                    </li>
+                    <li style="margin-left: 70px;"><a href="/intro/pickFilm?leoFilmForm=电视剧&sort=hot"
+                    >电视剧</a>
+                    </li>
+                    <li style="margin-left: 70px;"><a href="/intro/allSort?sort=hot"
+                    >分类</a>
+                    </li>
+                    <li style="margin-left: 70px;"><a href="/intro/top250"
+                    >排行榜</a>
+                    </li>
+                    <li style="margin-left: 70px;"><a href="/journal/journalList"
+                    >热门影刊</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <script src="//img3.doubanio.com/dae/accounts/resources/19870c3/movie/bundle.js" defer="defer"></script>
+    <div id="wrapper">
+    <div id="content" style="width: 1100px;">
+
+    <h1>福州影讯</h1>
+
+        <div class="grid-16-8 clearfix">
+            <div class="article" style=" width: 1100px;">
+    <div class="hd">
+        <ul class="tab-hd" style="margin-bottom: 10px;">
+            <li class="on"><span style="font-size: 20px;">即将上映</span></li>
+        </ul>
+    </div>
+
+    <div class="bd">
+        <div id="showing-soon" class="tab-bd">
+                <div th:each="leoFilm : ${willReleaseList}" class="item mod ">
+                    <a class="thumb" th:href="@{/intro/filmDetail(id=${leoFilm.leoFilmId})}">
+                        <img th:src="${leoFilm.leoFilmCover}" style="width: 100px; height: 150px">
+                    </a>
+                    <div class="intro">
+                        <h3>
+                            <a th:href="@{/intro/filmDetail(id=${leoFilm.leoFilmId})}" class=""><span th:text="${leoFilm.leoFilmName}"></span></a>
+                            <span class="icon"></span>
+                        </h3>
+                        <ul>
+                                <li class="dt"><span th:text="${leoFilm.leoFilmReleasedate}"></span></li>
+                                <li class="dt"><span th:text="${leoFilm.leoFilmType}"></span></li>
+                                <li class="dt"><span th:text="${leoFilm.leoFilmCountry}"></span></li>
+                                <a th:href="@{/intro/filmTrailer(leoFilmId=${leoFilm.leoFilmId})}" class="trailer_icon">预告片</a>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+    </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <link rel="stylesheet" type="text/css" href="https://img3.doubanio.com/f/shire/8377b9498330a2e6f056d863987cc7a37eb4d486/css/ui/dialog.css">
+    <link rel="stylesheet" type="text/css" href="https://img3.doubanio.com/f/epstein/1d829b8605b9e81435b127cbf3d16563aaa51838/css/movie/mod/reg_login_pop.css">
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/77323ae72a612bba8b65f845491513ff3329b1bb/js/do.js" data-cfg-autoload="false"></script>
+    <script type="text/javascript" src="https://img3.doubanio.com/f/shire/383a6e43f2108dc69e3ff2681bc4dc6c72a5ffb0/js/ui/dialog.js"></script>
+
+<script type="text/javascript">
+var _paq = _paq || [];
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+    var p=(('https:' == document.location.protocol) ? 'https' : 'http'), u=p+'://fundin.douban.com/';
+    _paq.push(['setTrackerUrl', u+'piwik']);
+    _paq.push(['setSiteId', '100001']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript';
+    g.defer=true;
+    g.async=true;
+    g.src=p+'://img3.doubanio.com/dae/fundin/piwik.js';
+    s.parentNode.insertBefore(g,s);
+})();
+</script>
+
+<script type="text/javascript">
+var setMethodWithNs = function(namespace) {
+  var ns = namespace ? namespace + '.' : ''
+    , fn = function(string) {
+        if(!ns) {return string}
+        return ns + string
+      }
+  return fn
+}
+
+var gaWithNamespace = function(fn, namespace) {
+  var method = setMethodWithNs(namespace)
+  fn.call(this, method)
+}
+
+var _gaq = _gaq || []
+  , accounts = [
+      { id: 'UA-7019765-1', namespace: 'douban' }
+    , { id: 'UA-7019765-19', namespace: '' }
+    ]
+  , gaInit = function(account) {
+      gaWithNamespace(function(method) {
+        gaInitFn.call(this, method, account)
+      }, account.namespace)
+    }
+  , gaInitFn = function(method, account) {
+      _gaq.push([method('_setAccount'), account.id]);
+      _gaq.push([method('_setSampleRate'), '5']);
+
+
+  _gaq.push([method('_addOrganic'), 'google', 'q'])
+  _gaq.push([method('_addOrganic'), 'baidu', 'wd'])
+  _gaq.push([method('_addOrganic'), 'soso', 'w'])
+  _gaq.push([method('_addOrganic'), 'youdao', 'q'])
+  _gaq.push([method('_addOrganic'), 'so.360.cn', 'q'])
+  _gaq.push([method('_addOrganic'), 'sogou', 'query'])
+  if (account.namespace) {
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣'])
+    _gaq.push([method('_addIgnoredOrganic'), 'douban'])
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣网'])
+    _gaq.push([method('_addIgnoredOrganic'), 'www.douban.com'])
+  }
+
+      if (account.namespace === 'douban') {
+        _gaq.push([method('_setDomainName'), '.douban.com'])
+      }
+
+        _gaq.push([method('_setCustomVar'), 1, 'responsive_view_mode', 'desktop', 3])
+
+        _gaq.push([method('_setCustomVar'), 2, 'login_status', '0', 2]);
+
+      _gaq.push([method('_trackPageview')])
+    }
+
+for(var i = 0, l = accounts.length; i < l; i++) {
+  var account = accounts[i]
+  gaInit(account)
+}
+
+
+;(function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+})()
+</script>
+
+
+
+
+
+
+
+
+    <!-- dae-web-epstein--default-85897fc44c-5gpjl-->
+
+  <script>_SPLITTEST=''</script>
+
+
+
+
+
+<div id="search_suggest" style="display: none; top: 78px; left: 402px;"><ul></ul></div></body></html>

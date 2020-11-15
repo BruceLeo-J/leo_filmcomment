@@ -1,0 +1,704 @@
+<html lang="zh-CN" class="ua-windows ua-webkit">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <title>
+        影刊
+    </title>
+
+    <meta name="baidu-site-verification" content="cZdR4xxR7RxmM4zE">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+
+    <link href="https://img3.doubanio.com/f/shire/859dba5cddc7ed1435808cf5a8ddde5792cd6e0c/css/douban.css"
+          rel="stylesheet" type="text/css">
+    <link href="https://img3.doubanio.com/f/shire/db02bd3a4c78de56425ddeedd748a6804af60ee9/css/separation/_all.css"
+          rel="stylesheet" type="text/css">
+    <link href="https://img3.doubanio.com/f/zerkalo/4b7b75331a86c9c8275ac6b7306e820fc072e09a/css/init.css"
+          rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/390d7dac8b0421ef.css">
+    <style type="text/css"></style>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://img3.doubanio.com/f/zerkalo/39d9ee8295939ace16805be57c357a940ea00568/css/review/editor/ng/setting_standalone.css">
+    <link type="text/css" rel="stylesheet"
+          href="https://img3.doubanio.com/f/shire/b45aa277f8b8df40596b96582dafb1ed0a899a64/css/report_dialog.css">
+    <script type="text/javascript"
+            th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/zerkalo/397690aa9f8875e3d6019c6c8554f53ea4f26853/js/review/editor/ng/render_gif.js"
+            async="true"></script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/072a17e1a083e85fab3d9bb187de25d07c97f544/js/report_dialog.js"
+            async="true"></script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/zerkalo/d1e90b56250b4f02be30956b6ec985750ce100cc/js/review/editor/ng/setting_standalone.js"
+            async="true"></script>
+    <script type="text/javascript" defer="" async="" src="https://img3.doubanio.com/dae/fundin/piwik.js"></script>
+    <script type="text/javascript"
+            src="//img1.doubanio.com/ZGJhYzhmaC9mL2FkanMvOTY0ZDI5MjQ5N2ViOGI2ZGU3ODdkYmI3YTk3NDliMTJlMzNmMGNlYy9hZC5yZWxlYXNlLmpz"
+            async="true"></script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/zerkalo/af7b34253d2668a25e74b93aac799a5d36be8608/js/review/editor/ng/vendor.js"
+            async="true"></script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/zerkalo/6c72ca62398dd1181a2ad3a2bc198adfde533dc2/js/review/editor/ng/manifest.js"
+            async="true"></script>
+    <script type="text/javascript">var _head_start = new Date();</script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/7cdd59e1378f9ccea648a083fecf12d71ed66c2b/js/jquery-1.8.3.js"></script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/77323ae72a612bba8b65f845491513ff3329b1bb/js/do.js"
+            data-cfg-autoload="false"></script>
+
+    <!--<script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/5ecaf46d6954d5a30bc7d99be86ae34031646e00/js/douban.js"></script>-->
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/afb2e24c7be373fa64d49d28de42719ec2262e1c/js/lib/moreurl.js"></script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/zerkalo/6df193f196533120434381e2761e9f780eb6f83c/dist/js/base.js"></script>
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/shire/0efdc63b77f895eaf85281fb0e44d435c6239a3f/js/separation/_all.js"></script>
+
+    <link rel="stylesheet"
+          href="https://img3.doubanio.com/f/zerkalo/2a8383cc6b23ea68f0d6e8511451b2101c5fa967/css/review/index.css">
+    <link rel="stylesheet"
+          href="https://img3.doubanio.com/f/zerkalo/b6f6aba4763527443a6c2d1ba8bea2a8556d1e22/css/review/editor/ng/render_gif.css">
+    <link rel="stylesheet" href="https://img3.doubanio.com/dae/cdnlib/libs/LikeButton/1.0.5/style.min.css">
+
+    <script type="text/javascript"
+            src="https://img3.doubanio.com/f/zerkalo/26ffd675884db883de565c9a5c9ffdf167ab55c5/js/ui/pos_fixed.js"></script>
+
+
+    <script type="text/javascript"></script>
+
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+    <style type="text/css">.form-input-wrapper {
+        position: relative;
+        border: 1px solid #D9D9D9;
+        border-radius: 3px;
+    }
+
+    .suggest-wrap {
+        position: absolute;
+        top: 30px;
+        min-width: 120px;
+        border: 1px solid #c5c7d2;
+        border-radius: 3px;
+        font-size: 13px;
+        background: #fff;
+        display: none;
+        z-index: 99;
+    }
+
+    .suggest-wrap.show {
+        display: block;
+    }
+
+    .suggest-wrap ul {
+        padding: 3px 0;
+        margin: 0;
+    }
+
+    .suggest-wrap li {
+        padding: 5px 7px;
+        line-height: 20px;
+        cursor: pointer;
+        text-align: left;
+    }
+
+    .suggest-wrap li a {
+        color: #333;
+    }
+
+    .suggest-wrap li a:hover {
+        background: transparent;
+    }
+
+    .suggest-wrap li.on {
+        background: #e9f0f8;
+    }
+
+    .suggest-wrap li img {
+        height: 20px;
+        width: 20px;
+        float: left;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+
+    .form-pre {
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        padding: 10px 8px;
+        margin: 0;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        overflow: auto;
+        z-index: -1;
+        font: 13px Helvetica, Arial, sans-serif;
+        color: #f00;
+    }
+
+    .form-pre code {
+        font: 13px Helvetica, Arial, sans-serif;
+    }
+
+    .form-area {
+        display: block;
+        width: 100%;
+        border: 0;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 10px 8px;
+        outline: none;
+        font-size: 13px;
+    }
+
+    .form-input {
+        border: 0;
+        padding: 0;
+        flex: 1;
+        outline: none;
+        font-size: 13px;
+    }
+
+    .img-uploader-wrapper {
+        cursor: pointer;
+        margin: 10px;
+        line-height: 1;
+    }
+
+    .img-uploader-wrapper .upload-icon {
+        display: inline-block;
+        width: 18px;
+        vertical-align: middle;
+    }
+
+    .img-uploader-wrapper label {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 4px;
+        font-size: 13px;
+        color: #999;
+        line-height: 18px;
+        cursor: pointer;
+    }
+
+    .img-uploader-wrapper .img-upload-input {
+        position: absolute;
+        left: 0;
+        width: 80px;
+        opacity: 0;
+        z-index: 2;
+    }
+
+    .img-uploader-wrapper .remove-img {
+        vertical-align: middle;
+        color: #999;
+    }
+
+    .img-uploader-wrapper .img-preview {
+        display: inline-block;
+        margin-right: 5px;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+
+    .img-uploader-wrapper .img-preview img {
+        max-height: 48px;
+        max-width: 48px;
+        vertical-align: middle;
+    }
+    </style>
+    <style type="text/css">@charset "UTF-8";
+    /**
+ * @Desc      回应编辑器
+ *
+ * @Author    wangyanhong
+ * @Date      2019-05-15
+ */
+    .reply-editor {
+        position: relative;
+        display: flex;
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+
+    .reply-editor form {
+        display: flex;
+        flex: 1;
+    }
+
+    .reply-editor .form-input-wrapper {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+        margin-right: 10px;
+        padding: 6px 10px;
+        line-height: 16px;
+    }
+
+    .reply-editor.show-captcha form {
+        flex-direction: column;
+    }
+
+    .reply-editor.show-captcha .form-input-wrapper {
+        width: 100%;
+        flex: none;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .reply-editor.show-captcha .reply-form-foot {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+        padding-bottom: 30px;
+    }
+
+    .reply-editor.show-captcha .captcha-wrapper {
+        margin-right: 15px;
+    }
+
+    .reply-editor .limit-count {
+        position: absolute;
+        top: 100%;
+        right: 80px;
+        margin-top: -7px;
+        font-size: 11px;
+    }
+
+    .reply-editor .limit-count.overflow {
+        color: #c34;
+    }
+
+    .reply-editor .mention-user {
+        padding-right: 5px;
+        line-height: 1;
+        font-size: 13px;
+        color: #494949;
+    }
+
+    .reply-editor .form-input {
+        border: 0;
+        padding: 0;
+        flex: 1;
+        outline: none;
+        font-size: 13px;
+    }
+    </style>
+
+</head>
+
+<body>
+
+
+<link href="//img3.doubanio.com/dae/accounts/resources/19870c3/shire/bundle.css" rel="stylesheet" type="text/css">
+
+<div id="db-global-nav" class="global-nav">
+    <div class="bd">
+        <div class="top-nav-info">
+                <span th:if="${session.user}==null">
+                <a href="/login" class="nav-login" rel="nofollow">登录/注册</a>
+                </span>
+            <span th:if="${session.user}!=null">
+                    <div class="top-nav-info">
+                      <ul>
+                        <li class="nav-user-account">
+                          <a class="bn-more">
+                            <span th:text="${session.user.getLeoUserName()}+'的账号'"></span><span class="arrow"></span>
+                          </a>
+                          <div class="more-items">
+                            <table cellpadding="0" cellspacing="0">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <a th:href="@{/userInfo(leoUserId=${session.user.getLeoUserId()})}">个人主页</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a target="_blank"
+                                       th:href="@{/modifyUserInfo(leoUserId=${session.user.getLeoUserId()})}">帐号管理</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a th:href="@{/logout}">退出</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                </span>
+        </div>
+        <div class="global-nav-items">
+            <ul>
+                <li class="">
+                    <a th:href="@{/intro/main}" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-main&quot;,&quot;uid&quot;:&quot;0&quot;}">品位如你！欢迎加入豆瓣社区，请在此开始你的电影人生 ~ </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="//img3.doubanio.com/dae/accounts/resources/19870c3/shire/bundle.js" defer="defer"></script>
+
+
+<link href="//img3.doubanio.com/dae/accounts/resources/19870c3/movie/bundle.css" rel="stylesheet" type="text/css">
+
+<div id="db-nav-movie" class="nav">
+    <div class="nav-wrap" style="margin-left: 365px">
+        <div class="nav-primary">
+            <div class="nav-logo">
+                <a th:href="@{/intro/main}">利欧电影</a>
+            </div>
+            <div class="nav-search">
+                <form action="/intro/searchFilm" method="get">
+                    <fieldset>
+                        <legend>搜索：</legend>
+                        <label for="inp-query">
+                        </label>
+                        <div class="inp"><input id="inp-query" name="searchKey" size="22" maxlength="60"
+                                                placeholder="搜索电影、电视剧、综艺..." autocomplete="off"></div>
+                        <div class="inp-btn"><input type="submit" value="搜索"></div>
+                        <input type="hidden" name="cat" value="1002"/>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="nav-secondary">
+
+
+        <div class="nav-items" style="margin-left: 50px;">
+            <ul style="padding-left: 80px">
+                <li style="margin-left: 10px;"><a href="/intro/willRelease"
+                >即将上映</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/pickFilm?leoFilmForm=电影&sort=hot"
+                >选电影</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/pickFilm?leoFilmForm=电视剧&sort=hot"
+                >电视剧</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/allSort?sort=hot"
+                >分类</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/top250"
+                >排行榜</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/journal/journalList"
+                >热门影刊</a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+<script src="//img3.doubanio.com/dae/accounts/resources/19870c3/movie/bundle.js" defer="defer"></script>
+
+
+<div id="wrapper" class="movie-content review-wrapper">
+
+
+    <div id="content">
+
+        <div class="grid-16-8 clearfix">
+
+
+            <div class="article" style="margin-left: 200px;">
+
+                <h1>
+                    <span property="v:summary">[[${leoJournal.leoJournalTitle}]]</span>
+                </h1>
+
+                <div>
+                    <div class="main" id="12936989">
+                        <a class="avatar author-avatar left" href="https://www.douban.com/people/157907331/"></a>
+
+                        <header class="main-hd">
+
+
+                        </header>
+
+
+                        <link rel="stylesheet"
+                              href="https://img3.doubanio.com/f/zerkalo/f61b1ee20b21ec9acc70c12aa511f4e04ba99924/css/review/list.css">
+                        <link rel="stylesheet"
+                              href="https://img3.doubanio.com/f/zerkalo/bdf0267cb139a03964b07991eeb290c389cdbe5d/css/review/rich_content.css">
+
+                        <div class="main-bd" id="review-12936989-content" data-ad-ext="有用71 · 没用2">
+
+                            <div id="link-report">
+                                <div class="review-content clearfix" data-author="wild life"
+                                     data-url="https://movie.douban.com/review/12936989/" data-original="1">
+                                    <blockquote data-align="" data-page="0">
+                                        <!--法官大人，自从这场审判开始以来，4752位美国军人在越南丧生，下面……是他们的名字--></blockquote>
+                                    <p data-align="" data-page="0"></p>
+                                    <div id="content1" hidden="hidden">
+                                        [[${leoJournal.leoJournalContent}]]
+                                    </div>
+                                    <div id="content2">
+                                    </div>
+                                    <script type="text/javascript">
+                                        $(function () {
+                                            $("#content2").html($("#content1").text());
+                                        });
+                                    </script>
+
+                                </div>
+
+
+                                <div class="copyright">
+                                    <span class="main-meta">发布于&nbsp;<span
+                                            th:text="${#dates.format(leoJournal.leoJournalDate, 'yyyy-MM-dd')}"></span></span>
+                                    &nbsp;&nbsp;© 本文版权归作者&nbsp; <a href="https://www.douban.com/people/157907331/">wild
+                                    life</a>
+                                    &nbsp;，任何形式转载请联系作者。
+                                </div>
+                            </div>
+
+                            <div class="main-author">
+
+
+                            </div>
+                            <link rel="stylesheet"
+                                  href="https://img3.doubanio.com/f/zerkalo/f61b1ee20b21ec9acc70c12aa511f4e04ba99924/css/review/list.css">
+                            <link rel="stylesheet"
+                                  href="https://img3.doubanio.com/f/zerkalo/bdf0267cb139a03964b07991eeb290c389cdbe5d/css/review/rich_content.css">
+
+
+                            <script th:inline="javascript">
+
+                                $(function () {  //一定要加这个入口函数$(function () { }才能触发按钮单击事件
+                                    $("#likeBtn").click(function () {
+                                        $.ajax({
+                                            type: 'GET'
+                                            , async: false
+                                            , url: '/journal/iLike?journalId=' + [[${leoJournal.leoJournalId}]]
+                                            , success: function (json) {
+                                                if (json.code == -1) {
+                                                    alert("请先登录")
+                                                    return false;
+                                                } else {
+
+                                                    if (json.likeStatus == false) {
+                                                        $("#likeBtn").removeClass("btn useful_count disabled")
+                                                        $("#likeBtn").attr("class", "btn useful_count")
+                                                    } else {
+                                                        $("#likeBtn").removeClass("btn useful_count")
+                                                        $("#likeBtn").attr("class", "btn useful_count disabled")
+                                                    }
+                                                    $("#likeCount").html("");
+                                                    document.getElementById("likeCount").innerHTML = json.likeCount;
+
+                                                }
+                                            }
+                                        })
+                                    });
+
+                                    //用户一进入，就在入口函数判断一次likeStatus
+                                    if ([[${session.user!=null}]]) {
+                                        $.ajax({
+                                            type: 'POST'
+                                            , async: false
+                                            , url: '/journal/checkLikeStatus'
+                                            , data: {
+                                                journalId: [[${leoJournal.leoJournalId}]]
+                                            }
+                                            , success: function (json) {
+                                                if (json.likeStatus == false) {
+                                                    $("#likeBtn").removeClass("btn useful_count disabled")
+                                                    $("#likeBtn").attr("class", "btn useful_count")
+                                                } else {
+                                                    $("#likeBtn").removeClass("btn useful_count")
+                                                    $("#likeBtn").attr("class", "btn useful_count disabled")
+                                                }
+                                            }
+                                        })
+                                    }
+
+                                });
+                            </script>
+                            <script>
+
+                                $(function () {
+                                    if([[${scrool!=null}]]){
+                                        window.scrollBy(0, 5000)
+                                    }
+                                })
+
+                                /*回应显示*/
+                                $(
+                                    function () {
+                                        $("[name='contentName']").hover(function(obj){
+
+                                            $(this).children().next().css('display','block');
+                                        },function(obj){
+                                            $(this).children().next().css('display','none');
+                                        });
+                                    }
+                                )
+                                /*回复框显示*/
+                                function replyBtn(obj){
+                                    if([[${session.user==null}]]){
+                                        alert("请先登录！");
+                                        return  false;
+                                    }
+                                    $("[name='addCommentDiv']").css('display','none');
+                                    $("#addCommentDiv"+obj.title).css('display','block');
+                                }
+                            </script>
+
+                            <div class="main-panel-useful">
+                                <button id="likeBtn" class="btn useful_count ">
+                                    喜欢 <span id="likeCount" th:text="${leoJournal.leoJournalLike}"></span>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="comments" class="comment-list">
+                    <div class="comments-app-wrapper">
+                        <div class="comment-list-wrapper">
+                            <div th:each="leoJournalComment: ${leoJournalCommentList}" class="item comment-item" >
+                                <div class="comment-item-body">
+                                    <div class="author-avatar"><a href="">
+                                        <img th:src="${leoJournalComment.leoUser.leoUserImage}" th:alt="${leoJournalComment.leoUser.leoUserName}"></a>
+                                    </div>
+                                    <div class="comment-main">
+                                        <div class="meta-header" style="background-color: rgb(243, 245, 247);"><a
+                                                href="" ><span th:text="${leoJournalComment.leoUser.leoUserName}"></span></a>
+                                            <span th:text="${leoJournalComment.leoJournalCommentDate}"></span>
+                                        </div>
+                                        <div th:id="${leoJournalComment.leoJournalCommentId}" class="comment-content" name="contentName"><span  th:text="${leoJournalComment.leoJournalCommentContent}"></span><button onclick="replyBtn(this)" th:title="${leoJournalComment.leoJournalCommentId}" th:id="${'btn'+leoJournalComment.leoJournalCommentId}"  style="background-color: white;border: none;float: right;display: none">回应</button></div>
+                                        <div class="reply-editor" style="display: none" name="addCommentDiv" th:id="${'addCommentDiv'+leoJournalComment.leoJournalCommentId}">
+                                            <form th:action="@{/journal/addComment}">
+                                                <div class="form-input-wrapper">
+                                                    <input name="leoJournalCommentContent" type="text" class="form-input"  th:placeholder="${'回应@'+leoJournalComment.leoUser.leoUserName}" value="" autocomplete="off">
+                                                    <div class="suggest-wrap" style="top: 0px; left: 0px;"></div>
+                                                </div>
+                                                <button type="submit" class="comment-form-btn">加上去</button>
+                                                <input type="hidden" name="leoJournalId" th:value="${leoJournal.leoJournalId}">
+                                                <input th:if="${session.user!=null}" type="hidden" name="leoUserId" th:value="${session.user.leoUserId}">
+                                                <input type="hidden" name="leoJournalCommentParentId" th:value="${leoJournalComment.leoJournalCommentId}">
+                                                <input type="hidden" name="leoJournalCommentLevel" value="2">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <span th:if="${secondCommentList.size()>0}">
+                                        <div class="reply-list">
+                                            <div class="item reply-item" th:each="secondComment:${secondCommentList}">
+                                                <span th:if="${secondComment.leoJournalCommentParentId==leoJournalComment.leoJournalCommentId}">
+                                                    <div class="comment-item-body">
+                                                        <div class="author-avatar avatar-small">
+                                                           <img style="width: 24px;height: 24px;" th:src="${secondComment.leoUser.leoUserImage}"></div>
+                                                        <div class="comment-main">
+                                                            <div class="meta-header">
+                                                                <a href=""><span th:text="${secondComment.leoUser.leoUserName}"></span> 回复<span th:text="${leoJournalComment.leoUser.leoUserName}"></span></a>
+                                                                <span th:text="${secondComment.leoJournalCommentDate}"></span>
+                                                            </div>
+                                                            <div th:id="${secondComment.leoJournalCommentId}" class="comment-content" name="contentName"><span  th:text="${secondComment.leoJournalCommentContent}"></span><button onclick="replyBtn(this)" th:title="${secondComment.leoJournalCommentId}" th:id="${'btn'+secondComment.leoJournalCommentId}" style="background-color: white;border: none;float: right;display: none">回应</button></div>
+                                                            <div class="reply-editor" style="display: none" name="addCommentDiv" th:id="${'addCommentDiv'+secondComment.leoJournalCommentId}" >
+                                                                    <form th:action="@{/journal/addComment}">
+                                                                        <div class="form-input-wrapper">
+                                                                            <input name="leoJournalCommentContent" type="text" class="form-input"  th:placeholder="${'回应@'+secondComment.leoUser.leoUserName}" value=""  autocomplete="off">
+                                                                            <div class="suggest-wrap" style="top: 0px; left: 0px;"></div>
+                                                                        </div>
+                                                                        <button type="submit" class="comment-form-btn">加上去</button>
+                                                                        <input type="hidden" name="leoJournalId" th:value="${leoJournal.leoJournalId}">
+                                                                        <input th:if="${session.user!=null}" type="hidden" name="leoUserId" th:value="${session.user.leoUserId}">
+                                                                        <input type="hidden" name="leoJournalCommentParentId" th:value="${secondComment.leoJournalCommentId}">
+                                                                        <input type="hidden" name="leoJournalCommentLevel" value="2">
+                                                                    </form>
+                                                                </div>
+                                                        </div>
+                                                    </div>
+                                                    <span th:each="replyComment:${secondCommentList}">
+                                                    <span th:if="${replyComment.leoJournalCommentParentId==secondComment.leoJournalCommentId}">
+                                                        <div class="comment-item-body">
+                                                            <div class="author-avatar avatar-small">
+                                                               <img style="width: 24px;height: 24px;" th:src="${replyComment.leoUser.leoUserImage}"></div>
+                                                            <div class="comment-main">
+                                                                <div class="meta-header">
+                                                                    <a href=""><span th:text="${replyComment.leoUser.leoUserName}"></span> 回复<span th:text="${secondComment.leoUser.leoUserName}"></span></a>
+                                                                    <span th:text="${replyComment.leoJournalCommentDate}"></span>
+                                                                </div>
+                                                                <div th:id="${replyComment.leoJournalCommentId}" class="comment-content" name="contentName"><span  th:text="${replyComment.leoJournalCommentContent}"></span><button onclick="replyBtn(this)" th:title="${replyComment.leoJournalCommentId}" th:id="${'btn'+replyComment.leoJournalCommentId}" style="background-color: white;border: none;float: right;display: none">回应</button></div>
+                                                                <div class="reply-editor" style="display: none" name="addCommentDiv" th:id="${'addCommentDiv'+replyComment.leoJournalCommentId}">
+                                                                    <form th:action="@{/journal/addComment}">
+                                                                        <div class="form-input-wrapper">
+                                                                            <input name="leoJournalCommentContent" type="text" class="form-input"  th:placeholder="${'回应@'+replyComment.leoUser.leoUserName}" value=""  autocomplete="off">
+                                                                            <div class="suggest-wrap" style="top: 0px; left: 0px;"></div>
+                                                                        </div>
+                                                                        <button type="submit" class="comment-form-btn">加上去</button>
+                                                                        <input type="hidden" name="leoJournalId" th:value="${leoJournal.leoJournalId}">
+                                                                        <input th:if="${session.user!=null}" type="hidden" name="leoUserId" th:value="${session.user.leoUserId}">
+                                                                        <input type="hidden" name="leoJournalCommentParentId" th:value="${replyComment.leoJournalCommentId}">
+                                                                        <input type="hidden" name="leoJournalCommentLevel" value="2">
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </span>
+                                                </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span th:if="${session.user!=null}">
+                <div class="comment-editor">
+                    <div style="height: 48px;width: 48px;"><img th:src="${session.user.leoUserImage}" style="height: 48px;width: 48px;"></div>
+                    <form class="form-field" th:action="@{/journal/addComment}" >
+                        <div class="form-input-wrapper">
+                            <div class="form-area-wrap">
+                                <textarea class="form-area" name="leoJournalCommentContent" placeholder="添加回应" rows="4"
+                                          cols="64"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-foot">
+                            <div class="form-foot-item limit-count overflow"></div>
+                            <div class="form-foot-item"></div>
+                            <div class="form-foot-item">
+                                <button type="submit" class="comment-form-btn">加上去</button>
+                            </div>
+                        </div>
+                        <input type="hidden" name="leoJournalId" th:value="${leoJournal.leoJournalId}">
+                        <input th:if="${session.user!=null}" type="hidden" name="leoUserId" th:value="${session.user.leoUserId}">
+                        <input type="hidden" name="leoJournalCommentLevel" value="1">
+                        <input type="hidden" name="scroolValue" id="scroolValue" value="1">
+                    </form>
+                </div>
+                </span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="https://img3.doubanio.com/misc/mixed_static/694ef2a64482e5c6.js"></script>
+
+<script type="text/javascript"
+        src="https://img3.doubanio.com/f/zerkalo/f81e691ad1c7ff2bf386d6eb565d1c32644b31e0/dist/js/review.js"></script>
+
+</html>

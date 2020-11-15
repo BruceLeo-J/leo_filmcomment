@@ -1,0 +1,269 @@
+<html lang="zh-CN" class="ua-windows ua-webkit">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+    <meta name="google-site-verification" content="ok0wCgT20tBBgo9_zat2iAcimtN4Ftf5ccsh092Xeyw">
+    <title>
+        热门影刊
+    </title>
+
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+
+
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+    <meta http-equiv="mobile-agent" content="format=html5; url=https://m.douban.com/group/">
+    <meta name="keywords" content="豆瓣小组,神回复,八卦贴">
+    <meta name="description"
+          content="一个独一无二的网络社区：每一天，都有来自全球 813 个城市的数百万用户汇聚在这里。加入小组，即可获得租房、工作、海淘...，达人们的一手经验。生活中遇到困难，豆友们帮你排忧解难。不管你喜欢看书，喜欢摄影还是喜欢看热闹，每个帖子的神回复，让你看了笑不停。">
+
+    <script type="text/javascript" defer="" async="" src="https://img3.doubanio.com/dae/fundin/piwik.js"></script>
+    <script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-5WP579"></script>
+    <script type="text/javascript"
+            src="//img1.doubanio.com/ZGJhYzhmaC9mL2FkanMvOTY0ZDI5MjQ5N2ViOGI2ZGU3ODdkYmI3YTk3NDliMTJlMzNmMGNlYy9hZC5yZWxlYXNlLmpz"
+            async="true"></script>
+    <script>var _head_start = new Date();</script>
+    <script src="https://img3.doubanio.com/f/shire/72ced6df41d4d158420cebdd254f9562942464e3/js/jquery.min.js"></script>
+    <script src="https://img3.doubanio.com/f/shire/5ecaf46d6954d5a30bc7d99be86ae34031646e00/js/douban.js"></script>
+    <link href="https://img3.doubanio.com/f/shire/859dba5cddc7ed1435808cf5a8ddde5792cd6e0c/css/douban.css"
+          rel="stylesheet" type="text/css">
+    <style type="text/css">
+
+
+    </style>
+
+    <link rel="stylesheet" href="https://img3.doubanio.com/misc/mixed_static/60b0b6feceb9d680.css">
+    <script>
+        Douban.init_join_group = function (a) {
+            var c = $(a);
+            var b = c.data("group_id");
+            c.click(function (d) {
+                d.preventDefault();
+                if (c.hasClass("processing")) {
+                    return
+                }
+                c.addClass("processing");
+                $.post_withck("/j/group/" + b + "/join", function (g) {
+                    c.removeClass("processing");
+                    var f = "已加入";
+                    if (!g.result) {
+                        f = g.msg || "加入失败"
+                    }
+                    c.replaceWith('<span class="joined">&#8730;' + f + "</span>")
+                }, "json")
+            })
+        };
+        Douban.init_show_request_join_form = function (b) {
+            var a = $(b).click(function (c) {
+                c.preventDefault();
+                group_id = a.data("group_id");
+                pop_win('<div style="padding:20px 60px;">加载中, 请稍等...</div>');
+                $.ajax({
+                    url: "/j/group/" + group_id + "/request_join_form2", success: function (f) {
+                        if (!f.html) {
+                            pop_win('<div style="padding:20px 60px;">' + f.msg + "</div");
+                            a.replaceWith('<span class="joined">&#8730;' + f.msg + "</span>")
+                        } else {
+                            pop_win(f.html);
+                            var d = $("#joinform").submit(function (g) {
+                                g.preventDefault();
+                                $.post_withck(d.attr("action"), d.serializeArray());
+                                a.replaceWith('<span class="joined">&#8730;已申请</span>');
+                                pop_win.close()
+                            })
+                        }
+                    }, cache: true, dataType: "json"
+                })
+            })
+        };
+    </script>
+
+    <link rel="stylesheet"
+          href="https://img3.doubanio.com/f/group/2f4c6f83940e2bbb76f5a23a7d987b9093919799/css/group/init.css">
+
+    <link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+    <script src="https://ssl.google-analytics.com/ga.js" async="true"></script>
+</head>
+
+<body>
+
+
+<script type="text/javascript">var _body_start = new Date();</script>
+
+
+<link href="//img3.doubanio.com/dae/accounts/resources/19870c3/shire/bundle.css" rel="stylesheet" type="text/css">
+
+
+<div id="db-global-nav" class="global-nav">
+    <div class="bd">
+        <div class="top-nav-info">
+                <span th:if="${session.user}==null">
+                <a href="/login" class="nav-login" rel="nofollow">登录/注册</a>
+                </span>
+            <span th:if="${session.user}!=null">
+                    <div class="top-nav-info">
+                      <ul>
+                        <li class="nav-user-account">
+                          <a class="bn-more" >
+                            <span th:text="${session.user.getLeoUserName()}+'的账号'"></span><span class="arrow"></span>
+                          </a>
+                          <div class="more-items">
+                            <table cellpadding="0" cellspacing="0">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <a th:href="@{/userInfo(leoUserId=${session.user.getLeoUserId()})}">个人主页</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a target="_blank" th:href="@{/modifyUserInfo(leoUserId=${session.user.getLeoUserId()})}">帐号管理</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a th:href="@{/logout}">退出</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                </span>
+        </div>
+        <div class="global-nav-items">
+            <ul>
+                <li class="">
+                    <a th:href="@{/intro/main}" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-main&quot;,&quot;uid&quot;:&quot;0&quot;}">品位如你！欢迎加入豆瓣社区，请在此开始你的电影人生 ~ </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script src="//img3.doubanio.com/dae/accounts/resources/19870c3/shire/bundle.js" defer="defer"></script>
+
+
+<div id="db-nav-movie" class="nav">
+    <div class="nav-wrap" style="margin-left: 365px">
+        <div class="nav-primary">
+            <div class="nav-logo">
+                <a th:href="@{/intro/main}">利欧电影</a>
+            </div>
+            <div class="nav-search">
+                <form action="/intro/searchFilm" method="get">
+                    <fieldset>
+                        <legend>搜索：</legend>
+                        <label for="inp-query">
+                        </label>
+                        <div class="inp"><input id="inp-query" name="searchKey" size="22" maxlength="60"
+                                                placeholder="搜索电影、电视剧、综艺..." autocomplete="off"></div>
+                        <div class="inp-btn"><input type="submit" value="搜索"></div>
+                        <input type="hidden" name="cat" value="1002"/>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="nav-secondary">
+
+
+        <div class="nav-items" style="margin-left: 50px;">
+            <ul style="padding-left: 80px">
+                <li style="margin-left: 10px;"><a href="/intro/willRelease"
+                >即将上映</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/pickFilm?leoFilmForm=电影&sort=hot"
+                >选电影</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/pickFilm?leoFilmForm=电视剧&sort=hot"
+                >电视剧</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/allSort?sort=hot"
+                >分类</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/intro/top250"
+                >排行榜</a>
+                </li>
+                <li style="margin-left: 70px;"><a href="/journal/journalList"
+                >热门影刊</a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div id="wrapper">
+    <div id="content" style="margin-left: 140px;">
+
+        <h1>
+            <div class="head-nav">
+        <span class="head-title">
+        热门影刊
+        </span>
+                <p>
+                </p></div>
+        </h1>
+
+        <div class="grid-16-8 clearfix">
+
+
+            <div class="article">
+
+
+                <div class="">
+
+                    <div th:each="leoJournal : ${pageInfo.list}" class="channel-item">
+                        <div class="likes">[[${leoJournal.leoJournalLike}]]<br>喜欢</div>
+                        <div class="bd">
+                            <h3><a th:href="@{/journal/journalDetail(journalId=${leoJournal.leoJournalId})}"><span
+                                    th:text="${leoJournal.leoJournalTitle}"></span></a></h3>
+                            <div class="block">
+
+                                <p>[[${leoJournal.leoJournalContent}]]
+                                </p></div>
+                            <div class="source">
+
+                                <span class="from">来自<a href="https://www.douban.com/group/634017/">猫小组</a></span>
+                                <span class="pubtime"><span
+                                        th:text="${#dates.format(leoJournal.leoJournalDate, 'yyyy-MM-dd')}"></span></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="paginator">
+
+                    <span class="next"><a th:href="@{/journal/journalList(pageNum=${pageInfo.pageNum - 1})}">&lt;前页</a></span>
+
+                    <span th:each="pageNum : ${pageInfo.navigatepageNums}">
+                        <a th:if="${pageNum!=pageInfo.pageNum}" th:href="@{/journal/journalList(pageNum=${pageNum})}"><span th:text="${pageNum}"></span></a>
+                        <a style="color: #6EBFC3" th:if="${pageNum==pageInfo.pageNum}" th:href="@{/journal/journalList(pageNum=${pageNum})}"><span th:text="${pageNum}"></span></a>
+                    </span>
+                    <span class="next"><a th:href="@{/journal/journalList(pageNum=${pageInfo.pageNum + 1})}">后页&gt;</a></span>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="https://img3.doubanio.com/misc/mixed_static/73a153b8a9e0f7ce.js"></script>
+
+</body>
+</html>
